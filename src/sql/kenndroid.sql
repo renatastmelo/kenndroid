@@ -17,7 +17,7 @@ Canil (
 	razao_social	TEXT		NULL,
 	fone1			TEXT		NULL,
 	fone2			TEXT		NULL,
-	email			TEXT		NULL,
+	email			TEXT		NULL
 );
 
 -- Tabela de Animais
@@ -31,7 +31,7 @@ Animal (
 	canil			INTEGER		NOT NULL,
 	comprador		INTEGER		NULL,
 	data_venda		TEXT		NULL,
-	foto			BLOB		NULL,
+	foto			BLOB		NULL
 );
 
 -- Tabela de Vendas
@@ -47,7 +47,7 @@ Venda (
 	data_entrega_pedigree	TEXT		NULL,
 	forma_pagamento			INTEGER		NULL,
 	nota_fiscal				INTEGER		NULL,
-	observacoes				TEXT		NULL,
+	observacoes				TEXT		NULL
 	);
 
 -- Tabela de Clientes
@@ -67,7 +67,7 @@ Cliente (
 	cpf				TEXT		NULL,
 	fone1			TEXT		NULL,
 	fone2			TEXT		NULL,
-	email			TEXT		NULL,
+	email			TEXT		NULL
 );
 
 -- Tabela de Clinicas
@@ -85,7 +85,7 @@ Clinica (
 	cep				INTEGER		NULL,
 	fone1			TEXT		NULL,
 	fone2			TEXT		NULL,
-	email			TEXT		NULL,
+	email			TEXT		NULL
 );
 
 -- Tabela de Veterinarios
@@ -103,7 +103,7 @@ Veterinario (
 	cep				INTEGER		NULL,
 	fone1			TEXT		NULL,
 	fone2			TEXT		NULL,
-	email			TEXT		NULL,
+	email			TEXT		NULL
 );
 
 -- Tabela de cadastro das Vacinas
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS
 Vacina (
 	id				INTEGER		PRIMARY KEY		AUTOINCREMENT,
 	nome			TEXT		NOT NULL,
-	descricao		TEXT		NULL,
+	descricao		TEXT		NULL
 );
 
 -- Tabela de Vacinacoes realizadas
@@ -127,7 +127,7 @@ Vacinacao (
 	lote				TEXT		NULL,
 	reacoes_adversas	TEXT		NULL,
 	valor 				INTEGER		NOT NULL,
-	observacoes			TEXT		NULL,
+	observacoes			TEXT		NULL
 );
 
 -- Tabela de Eventos
@@ -145,7 +145,7 @@ Evento (
 	fone			TEXT		NULL,
 	email			TEXT		NULL,
 	organizacao		TEXT		NULL,
-	data 			TEXT		NULL,
+	data 			TEXT		NULL
 );
 
 
@@ -159,7 +159,7 @@ AnimalEvento (
 	pontos			TEXT		NULL,
 	juizes			TEXT		NULL,
 	penalizacao		INTEGER		NULL,
-	percursos		INTEGER		NULL,
+	percursos		INTEGER		NULL
 );
 
 -- Tabela de acasalamentos do Canil
@@ -176,7 +176,7 @@ Cruzamento (
 	complemento		TEXT		NULL,
 	ponto_ref		TEXT		NULL,
 	cep				INTEGER		NULL,
-	sucesso			INTEGER		NULL,
+	sucesso			INTEGER		NULL
 );
 
 
@@ -185,5 +185,5 @@ CREATE TABLE IF NOT EXISTS
 Config (
 	id				INTEGER		PRIMARY KEY		AUTOINCREMENT,
 	id_Canil		INTEGER		NOT NULL,
-	senha			TEXT		NULL,
+	senha			TEXT		NULL
 );
