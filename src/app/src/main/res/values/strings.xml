@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Kenndroid</string>
+    <string name="action_config">Configurações</string>
+    <string name="action_canil">Canil</string>
+    <string name="action_animal">Animais</string>
+    <string name="action_acasalamentos">Acasalamentos</string>
+    <string name="action_vendas">Vendas</string>
+    <string name="action_clientes">Clientes</string>
+    <string name="action_clinicas">Clinicas</string>
+    <string name="action_veterinarios">Veterinários</string>
+    <string name="action_vacinas">Vacinas</string>
+    <string name="action_eventos">Eventos</string>
+</resources>
