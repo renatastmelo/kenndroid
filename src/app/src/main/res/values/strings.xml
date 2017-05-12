@@ -15,6 +15,12 @@
     <!--tela de cadastro de Canil-->
     <string name="titulo_cad">Cadastro de Canil</string>
 
+    <!--tela de cadastro de Vacinas-->
+    <string name="titulo_cadVac">Cadastro de Vacinas</string>
+
+    <!--tela de cadastro de Vendas-->
+    <string name="titulo_cadVenda">Cadastro de Venda9</string>
+
     <!--campos de cadastros-->
     <string name="edt_nome">Nome</string>
     <string name="edt_cidade">Cidadde</string>
@@ -29,4 +35,6 @@
     <string name="edt_fone1">Telefone</string>
     <string name="edt_fone2">Telefone</string>
     <string name="edt_email">E-mail</string>
+    <string name="edt_descricao">Breve drescrição</string>
+
 </resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="renata.kenndroid.CadVacinas">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_vacinas" />
+
+    <TextView
+        android:id="@+id/titulo_cadVac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_cadVac"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <EditText
+        android:id="@+id/edt_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="16"
+        android:inputType="textPersonName"
+        android:text="@string/edt_nome"
+        tools:layout_editor_absoluteY="44dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/edt_descricao"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:text="@string/edt_descricao"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteY="87dp"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Cadastrar"
+        tools:layout_editor_absoluteY="165dp"
+        tools:layout_editor_absoluteX="140dp" />
+
+
+
+
+

@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CanilActivity"></activity>
+        <activity android:name=".CadCanil" />
+        <activity android:name=".CadVacinas" />
+        <activity android:name=".CadVendas"></activity>
     </application>
 
 </manifest>
