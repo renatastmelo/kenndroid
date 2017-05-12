@@ -1,4 +1,5 @@
 <resources>
+    <!--menu -->
     <string name="app_name">Kenndroid</string>
     <string name="action_config">Configurações</string>
     <string name="action_canil">Canil</string>
@@ -10,4 +11,22 @@
     <string name="action_veterinarios">Veterinários</string>
     <string name="action_vacinas">Vacinas</string>
     <string name="action_eventos">Eventos</string>
+
+    <!--tela de cadastro de Canil-->
+    <string name="titulo_cad">Cadastro de Canil</string>
+
+    <!--campos de cadastros-->
+    <string name="edt_nome">Nome</string>
+    <string name="edt_cidade">Cidadde</string>
+    <string name="edt_estado">Estado</string>
+    <string name="edt_end">Endereço</string>
+    <string name="edt_compl">Complemento</string>
+    <string name="edt_pt_ref">Ponto de referência</string>
+    <string name="edt_cep">CEP</string>
+    <string name="edt_dataFund">Data de fundação</string>
+    <string name="edt_cnpj">CNPJ</string>
+    <string name="edt_razao_social">Razão Social</string>
+    <string name="edt_fone1">Telefone</string>
+    <string name="edt_fone2">Telefone</string>
+    <string name="edt_email">E-mail</string>
 </resources>
