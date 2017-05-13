@@ -1,47 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="renata.kenndroid.CadVendas">
+    android:baselineAligned="false">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_vendas"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp" />
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
 
-    <TextView
-        android:id="@+id/titulo_cadVac"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_cadVac"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="8dp" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_vendas" />
+
+        <TextView
+
+            android:id="@+id/titulo_cadVenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:text="@string/titulo_cadVenda"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp" />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/edt_nome"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="16"
+        android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome"
-        tools:layout_editor_absoluteY="44dp"
-        tools:layout_editor_absoluteX="16dp" />
+        android:text="@string/edt_nome_animal" />
 
     <EditText
-        android:id="@+id/edt_descricao"
-        android:layout_width="343dp"
-        android:layout_height="50dp"
+        android:id="@+id/edt_nome_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:text="@string/edt_descricao"
-        android:inputType="textMultiLine"
-        tools:layout_editor_absoluteY="87dp"
-        tools:layout_editor_absoluteX="18dp" />
+        android:inputType="textPersonName"
+        android:text="@string/edt_nome_cliente" />
+
+    <EditText
+        android:id="@+id/edt_dt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_dt" />
+
+    <EditText
+        android:id="@+id/edt_entrega_pedigree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_entrega_pedigree" />
+
+    <EditText
+        android:id="@+id/edt_forma_pgto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_forma_pgto" />
+
+    <CheckBox
+        android:id="@+id/edt_nota_fiscal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edt_nota_fiscal" />
+
+    <EditText
+        android:id="@+id/edt_valor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/edt_valor" />
+
+    <EditText
+        android:id="@+id/edt_valor_recebido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/edt_valor_recebido" />
+
+    <EditText
+        android:id="@+id/edt_dt_ult_pgto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_dt_ult_pgto" />
+
+
+    <EditText
+        android:id="@+id/edt_fone1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_fone1" />
+
+    <EditText
+        android:id="@+id/edt_fone2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_fone2" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_email" />
 
     <Button
         android:id="@+id/button"
@@ -50,9 +133,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="Cadastrar"
-        tools:layout_editor_absoluteY="165dp"
-        tools:layout_editor_absoluteX="140dp" />
+        android:text="Cadastrar" />
 
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

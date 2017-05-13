@@ -19,7 +19,7 @@
     <string name="titulo_cadVac">Cadastro de Vacinas</string>
 
     <!--tela de cadastro de Vendas-->
-    <string name="titulo_cadVenda">Cadastro de Venda9</string>
+    <string name="titulo_cadVenda">Cadastro de Vendas</string>
 
     <!--campos de cadastros-->
     <string name="edt_nome">Nome</string>
@@ -36,5 +36,17 @@
     <string name="edt_fone2">Telefone</string>
     <string name="edt_email">E-mail</string>
     <string name="edt_descricao">Breve drescrição</string>
+    <string name="edt_nome_animal">Nome do animal</string>
+    <string name="edt_nome_cliente">Nome do Cliente</string>
+
+    <!--campos de cadastros extras de venda-->
+    <string name="edt_dt">Data da venda</string>
+    <string name="edt_valor">R$ </string>
+    <string name="edt_valor_recebido">Valor recebido</string>
+    <string name="edt_entrega_pedigree">Data de entrega do pedigree</string>
+    <string name="edt_dt_ult_pgto">Data do último pagamento</string>
+    <string name="edt_nota_fiscal">Nota Fiscal</string>
+    <string name="edt_forma_pgto">forma de pagamento</string>
+    <string name="edt_obs">Observações</string>
 
 </resources>
