@@ -16,86 +16,25 @@
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_clientes" />
+            app:srcCompat="@drawable/ic_canil" />
 
         <TextView
-            android:id="@+id/titulo_cadClientes"
+            android:id="@+id/titulo_cad"
             android:layout_width="374dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:textSize="20dp"
-            android:text="@string/titulo_cadClientes" />
+            android:text="@string/titulo_cad" />
 
     </LinearLayout>
 
-    <!-- cadastro do dia, mês e ano dentro de um linearlayout interno-->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/edt_nome_campo_nasc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/edt_nome_campo_nasc"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-        <EditText
-            android:id="@+id/dia"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="numberSigned"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
-        />
-
-        <EditText
-            android:id="@+id/mes"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="numberSigned"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
-        />
-
-        <EditText
-            android:id="@+id/ano"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="numberSigned"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
-        />
-
-    </LinearLayout>
-
-    <!-- inicio do cadastro após a data -->
     <EditText
         android:id="@+id/edt_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome"
-    />
-
-    <EditText
-        android:id="@+id/edt_cpf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/edt_cpf"
-    />
+        android:text="@string/edt_nome" />
 
     <EditText
         android:id="@+id/edt_cidade"
@@ -103,8 +42,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_cidade"
-    />
+        android:text="@string/edt_cidade" />
 
     <EditText
         android:id="@+id/edt_estado"
@@ -112,8 +50,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_estado"
-    />
+        android:text="@string/edt_estado" />
 
     <EditText
         android:id="@+id/edt_end"
@@ -121,8 +58,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_end"
-    />
+        android:text="@string/edt_end" />
 
     <EditText
         android:id="@+id/edt_compl"
@@ -130,8 +66,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_compl"
-    />
+        android:text="@string/edt_compl" />
 
     <EditText
         android:id="@+id/edt_pt_ref"
@@ -139,8 +74,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_pt_ref"
-     />
+        android:text="@string/edt_pt_ref" />
 
     <EditText
         android:id="@+id/edt_cep"
@@ -148,8 +82,15 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_cep"
-    />
+        android:text="@string/edt_cep" />
+
+    <EditText
+        android:id="@+id/edt_dataFund"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_dataFund" />
 
     <EditText
         android:id="@+id/edt_fone1"
@@ -157,8 +98,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text|phone"
-        android:text="@string/edt_fone1"
-    />
+        android:text="@string/edt_fone1" />
 
     <EditText
         android:id="@+id/edt_fone2"
@@ -166,8 +106,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text|phone"
-        android:text="@string/edt_fone2"
-    />
+        android:text="@string/edt_fone2" />
 
     <EditText
         android:id="@+id/edt_email"
@@ -175,8 +114,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="@string/edt_email"
-    />
+        android:text="@string/edt_email" />
 
     <Button
         android:id="@+id/button"
@@ -185,6 +123,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="Cadastrar"
-    />
+        android:text="Cadastrar" />
 </LinearLayout>

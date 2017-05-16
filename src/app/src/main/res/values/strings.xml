@@ -27,6 +27,10 @@
     <!--tela de cadastro de Clientes-->
     <string name="titulo_cadClientes">Cadastro de Clientes</string>
 
+    <!--tela de cadastro de Clientes-->
+    <string name="titulo_cadAnimal">Cadastro de Animal</string>
+
+
     <!--campos de cadastros-->
     <string name="edt_nome">Nome</string>
     <string name="edt_cidade">Cidadde</string>
@@ -46,6 +50,7 @@
     <string name="edt_nome_cliente">Nome do Cliente</string>
     <string name="edt_cpf">CPF</string>
 
+
     <!--campos de cadastros extras de venda-->
     <string name="edt_dt">Data da venda</string>
     <string name="edt_valor">R$ </string>
@@ -60,9 +65,19 @@
     <string name="edt_especialidade">Especialidade veterinária</string>
 
     <!--campos de cadastros extras de Cadastro de Clientes-->
-    <string name="edt_nome_campo_nasc">Data de nascimento:</string>
+    <string name="edt_nome_campo_nasc">Data de nasc:</string>
     <string name="edt_dia">00</string>
     <string name="edt_mes">00</string>
     <string name="edt_ano">00</string>
+    <string name="title_activity_cad_animal">CadAnimal</string>
+
+    <!--campos de cadastros extras de Cadastro de Animais-->
+    <string name="edt_nome_campo_data_venda">Data da venda:</string>
+    <string name="edt_nome_pai">Nome do pai</string>
+    <string name="edt_nome_mae">Nome da mãe</string>
+    <string name="edt_nome_canil">Nome do Canil</string>
+    <string name="edt_nome_comprador">Nome do Comprador</string>
+    <string name="edt_foto">Foto: </string>
+
 
 </resources>
