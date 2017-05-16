@@ -71,6 +71,6 @@
         android:id="@+id/action_eventos"
         android:orderInCategory="100"
         android:icon="@drawable/ic_eventos"
-        android:title="Eventos"
+        android:title="@string/action_eventos"
         app:showAsAction="never" />
 </menu>
