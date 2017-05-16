@@ -24,6 +24,9 @@
     <!--tela de cadastro de Veterinários-->
     <string name="titulo_cadVet">Cadastro de Venterinários</string>
 
+    <!--tela de cadastro de Clientes-->
+    <string name="titulo_cadClientes">Cadastro de Clientes</string>
+
     <!--campos de cadastros-->
     <string name="edt_nome">Nome</string>
     <string name="edt_cidade">Cidadde</string>
@@ -55,4 +58,11 @@
 
     <!--campos de cadastros extras de Cadastro de vetenários-->
     <string name="edt_especialidade">Especialidade veterinária</string>
+
+    <!--campos de cadastros extras de Cadastro de Clientes-->
+    <string name="edt_nome_campo_nasc">Data de nascimento:</string>
+    <string name="edt_dia">00</string>
+    <string name="edt_mes">00</string>
+    <string name="edt_ano">00</string>
+
 </resources>

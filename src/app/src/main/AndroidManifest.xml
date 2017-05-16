@@ -22,7 +22,8 @@
         <activity android:name=".CadCanil" />
         <activity android:name=".CadVacinas" />
         <activity android:name=".CadVendas" />
-        <activity android:name=".CadVet"></activity>
+        <activity android:name=".CadVet" />
+        <activity android:name=".CadClientes"></activity>
     </application>
 
 </manifest>
