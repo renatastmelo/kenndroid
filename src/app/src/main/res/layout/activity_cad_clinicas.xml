@@ -4,6 +4,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Titulo da Tela-->
     <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -28,6 +29,7 @@
 
     </LinearLayout>
 
+    <!-- inicio do cadastro-->
     <EditText
         android:id="@+id/edt_nome"
         android:layout_width="match_parent"
@@ -35,6 +37,22 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/edt_nome" />
+
+    <EditText
+        android:id="@+id/edt_cnpj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_cnpj" />
+
+    <EditText
+        android:id="@+id/edt_razao_social"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_razao_social" />
 
     <EditText
         android:id="@+id/edt_cidade"
@@ -83,14 +101,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/edt_cep" />
-
-    <EditText
-        android:id="@+id/edt_dataFund"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/edt_dataFund" />
 
     <EditText
         android:id="@+id/edt_fone1"
