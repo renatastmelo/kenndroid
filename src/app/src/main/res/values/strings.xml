@@ -27,9 +27,14 @@
     <!--tela de cadastro de Clientes-->
     <string name="titulo_cadClientes">Cadastro de Clientes</string>
 
-    <!--tela de cadastro de Clientes-->
+    <!--tela de cadastro de Animais-->
     <string name="titulo_cadAnimal">Cadastro de Animal</string>
 
+    <!--tela de cadastro de Vacinações realizadas-->
+    <string name="titulo_cadVacinacao">Cadastro de Vacinação</string>
+
+    <!--tela de cadastro de Clinicas-->
+    <string name="titulo_cadClinica">Cadastro de Clínicas</string>
 
     <!--campos de cadastros-->
     <string name="edt_nome">Nome</string>
@@ -64,6 +69,9 @@
     <!--campos de cadastros extras de Cadastro de vetenários-->
     <string name="edt_especialidade">Especialidade veterinária</string>
 
+    <!--campos de cadastros extras de Cadastro de Vacinações realizadas-->
+    <string name="edt_nome_clinica">Clínica: </string>
+
     <!--campos de cadastros extras de Cadastro de Clientes-->
     <string name="edt_nome_campo_nasc">Data de nasc:</string>
     <string name="edt_dia">00</string>
@@ -79,5 +87,18 @@
     <string name="edt_nome_comprador">Nome do Comprador</string>
     <string name="edt_foto">Foto: </string>
 
+    <!--campos de cadastros extras de Cadastro de Vacinas-->
+    <string name="edt_nome_vac">Vacina: </string>
+
+    <!--campos de cadastros extras de Cadastro de Vacinações realizadas-->
+    <string name="edt_m_vac">Marca da Vacina</string>
+    <string name="edt_valVac">Validade: </string>
+    <string name="edt_lote">Lote da vacina</string>
+    <string name="edt_reac_adv">Reações adversas</string>
+    <string name="edt_nomeAnimal">Animal: </string>
+    <string name="edt_nomeVet">Médico: </string>
+    <string name="edt_data">Data Vacinação: </string>
+    <string name="edt_val">Validade Vacina: </string>
+    <string name="edt_valor_Vac">Valor: </string>
 
 </resources>
