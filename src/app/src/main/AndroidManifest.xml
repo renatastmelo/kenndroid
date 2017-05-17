@@ -26,7 +26,8 @@
         <activity android:name=".CadClientes" />
         <activity android:name=".CadAnimal" />
         <activity android:name=".CadClinicas" />
-        <activity android:name=".CadVacinacao"></activity>
+        <activity android:name=".CadVacinacao" />
+        <activity android:name=".CadEvento"></activity>
     </application>
 
 </manifest>

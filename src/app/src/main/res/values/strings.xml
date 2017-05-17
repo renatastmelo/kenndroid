@@ -36,6 +36,9 @@
     <!--tela de cadastro de Clinicas-->
     <string name="titulo_cadClinica">Cadastro de Clínicas</string>
 
+    <!--tela de cadastro de Eventos-->
+    <string name="titulo_cadEvento">Cadastro de Evento</string>
+
     <!--campos de cadastros-->
     <string name="edt_nome">Nome</string>
     <string name="edt_cidade">Cidadde</string>
@@ -100,5 +103,13 @@
     <string name="edt_data">Data Vacinação: </string>
     <string name="edt_val">Validade Vacina: </string>
     <string name="edt_valor_Vac">Valor: </string>
+
+    <!--campos de cadastros extras de Cadastro de Eventos-->
+    <string name="edt_nomeEvento">Nome do evento</string>
+    <string name="edt_tpo_evento">Competição de:</string>
+    <string name="edt_dataEvento">Data do Evento: </string>
+    <string name="edt_orgEvento">Organização do Evento</string>
+    <string name="edt_eventoTpo1">Exposição</string>
+    <string name="edt_eventoTpo2">Agility</string>
 
 </resources>

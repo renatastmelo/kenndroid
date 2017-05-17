@@ -4,9 +4,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <?xml version="1.0" encoding="utf-8"?>
-
     <!-- Titulo da tela-->
+    <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="horizontal"
@@ -18,29 +17,36 @@
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_animais" />
+            app:srcCompat="@drawable/ic_eventos" />
 
         <TextView
-            android:id="@+id/titulo_cadAnimal"
+            android:id="@+id/titulo_cad"
             android:layout_width="374dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:textSize="20dp"
-            android:text="@string/titulo_cadAnimal" />
+            android:text="@string/titulo_cad" />
 
     </LinearLayout>
 
-    <!-- Dados cadastrais dos animais -->
+
     <EditText
-        android:id="@+id/edt_nome"
+        android:id="@+id/edt_nomeEvento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome"
-        />
+        android:text="@string/edt_nomeEvento" />
 
-    <!-- Data de nascimento -->
+    <EditText
+        android:id="@+id/edt_orgEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_orgEvento" />
+
+    <!-- Data do Evento-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,115 +55,108 @@
 
 
         <TextView
-            android:id="@+id/edt_nome_campo_nasc"
+            android:id="@+id/dataEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
             android:layout_gravity="center_vertical"
-            android:text="@string/edt_nome_campo_nasc"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            android:text="@string/edt_dataEvento"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/data"
+            android:id="@+id/data_vac"
             style="@style/Widget.AppCompat.EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="date" />
-        />
-
     </LinearLayout>
 
-    <!-- Data de nascimento -->
-    <LinearLayout
+    <TextView
+        android:id="@+id/tpo_evento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
+        android:text="@string/edt_tpo_evento"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16dp" />
 
+    <RadioButton
+        android:id="@+id/edt_eventoTpo1"
+        android:layout_marginLeft="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edt_eventoTpo1" />
 
-        <TextView
-            android:id="@+id/edt_nome_campo_data_venda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/edt_nome_campo_data_venda"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-        <EditText
-            android:id="@+id/animal_data"
-            style="@style/Widget.AppCompat.EditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date" />
-        />
-
-    </LinearLayout>
+    <RadioButton
+        android:id="@+id/edt_eventoTpo2"
+        android:layout_marginLeft="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edt_eventoTpo2" />
 
     <EditText
-        android:id="@+id/edt_nome_pai"
+        android:id="@+id/edt_cidade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_pai"
-        />
+        android:text="@string/edt_cidade" />
 
     <EditText
-        android:id="@+id/edt_nome_mae"
+        android:id="@+id/edt_estado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_mae"
-        />
+        android:text="@string/edt_estado" />
 
     <EditText
-        android:id="@+id/edt_nome_canil"
+        android:id="@+id/edt_end"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_canil"
-        />
+        android:text="@string/edt_end" />
 
     <EditText
-        android:id="@+id/edt_nome_compradorl"
+        android:id="@+id/edt_compl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_comprador"
-        />
+        android:text="@string/edt_compl" />
 
-    <!-- Foto -->
-    <LinearLayout
+    <EditText
+        android:id="@+id/edt_pt_ref"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_pt_ref" />
 
+    <EditText
+        android:id="@+id/edt_cep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_cep" />
 
-        <TextView
-            android:id="@+id/edt_foto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/edt_foto"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    <EditText
+        android:id="@+id/edt_fone1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text|phone"
+        android:text="@string/edt_fone1" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/fab_margin"
-            app:srcCompat="@android:drawable/ic_menu_report_image" />
-        />
-
-    </LinearLayout>
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/edt_email" />
 
     <Button
         android:id="@+id/button"
@@ -165,8 +164,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="Cadastrar"
-        />
+        android:text="Cadastrar" />
 </LinearLayout>
