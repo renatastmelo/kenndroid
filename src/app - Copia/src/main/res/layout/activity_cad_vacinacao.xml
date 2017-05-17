@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false">
+
+    <!-- Titulo da tela-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_vacinas" />
+
+        <TextView
+
+            android:id="@+id/titulo_cadVacinacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:text="@string/titulo_cadVacinacao"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <!-- nome do animal em dropbox-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/text_drop_nomeAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/edt_nomeAnimal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:id="@+id/drop_animal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:minWidth="?android:attr/panelMenuListWidth"
+            android:spinnerMode="dropdown"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <!-- nome da vacina em dropbox-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/text_drop_vacina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/edt_nome_vac"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Spinner
+            android:id="@+id/drop_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:minWidth="?android:attr/panelMenuListWidth"
+            android:spinnerMode="dropdown"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <!-- nome do veterinário em dropbox-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/text_drop_vet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/edt_nomeVet"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Spinner
+            android:id="@+id/drop_veterinarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right
+"
+            android:minWidth="?android:attr/panelMenuListWidth"
+            android:spinnerMode="dropdown"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <!-- nome da Clínica em dropbox-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/text_drop_clinica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/edt_nome_clinica"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Spinner
+            android:id="@+id/drop_nome_vet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:minWidth="?android:attr/panelMenuListWidth"
+            android:spinnerMode="dropdown"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <!-- Data de vacinação-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/edt_data"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/data_vac"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date" />
+    </LinearLayout>
+
+
+    <!-- Data de Validade da Vacina-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/data_vacinacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/edt_val"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/vacValidade"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/marcaVac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_m_vac" />
+
+    <EditText
+        android:id="@+id/edt_lote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_lote" />
+
+    <EditText
+        android:id="@+id/edt_reacao_adversa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/edt_reac_adv" />
+
+    <!-- nome do veterinário em dropbox-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/text_vet_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/edt_nomeVet"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Spinner
+            android:id="@+id/drop_vet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:minWidth="?android:attr/panelMenuListWidth"
+            android:spinnerMode="dropdown"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <!-- nome do valor da vacina com campo numerico ao lado-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/text_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/edt_valor_Vac"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+        <EditText
+            android:id="@+id/pgtoVac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberSigned" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/vacinacao_obs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_obs" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Cadastrar" />
+
+</LinearLayout>

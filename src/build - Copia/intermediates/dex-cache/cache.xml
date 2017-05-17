@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Renata\AndroidStudioProjects\Kenndroid\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8560dda270c40a117b50693a7a47180aaa07154f">
+        <dex dex="C:\Users\Renata\AndroidStudioProjects\Kenndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_c6c8584c85ea6c441484f2d6b6c33a2159947d72\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Renata\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Renata\AndroidStudioProjects\Kenndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_7729be82b233e8c8501f021f4ed3f8efc5cd1c89\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Renata\AndroidStudioProjects\Kenndroid\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\Renata\AndroidStudioProjects\Kenndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_50fefd2a4debc2fd8c9665129ea3abc24b8fe27d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Renata\.android\build-cache\deda9c3dfe4851b61d594328a36ca080d58b788f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Renata\AndroidStudioProjects\Kenndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_697da70c92249bdb3a17c276f6d5a7162f7c025f\classes.dex" />
+    </item>
+
+</items>
