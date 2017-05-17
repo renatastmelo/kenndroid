@@ -4,7 +4,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Titulo da tela-->
     <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,36 +16,74 @@
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_eventos" />
+            app:srcCompat="@drawable/ic_acasalamento" />
 
         <TextView
-            android:id="@+id/titulo_cadEvento"
+            android:id="@+id/titulo_cad"
             android:layout_width="374dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textSize="20sp"
-            android:text="@string/titulo_cadEvento" />
+            android:textSize="20dp"
+            android:text="@string/titulo_cadAcasala" />
 
     </LinearLayout>
 
-
-    <EditText
-        android:id="@+id/edt_nomeEvento"
+    <!-- nome do macho em dropbox-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/edt_nomeEvento" />
+        android:baselineAligned="false"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/edt_orgEvento"
+        <TextView
+            android:id="@+id/text_drop_nomeMacho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:text="@string/edt_nomeMacho"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/drop_Macho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:minWidth="?android:attr/panelMenuListWidth"
+            android:spinnerMode="dropdown"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- nome da fêmea em dropbox-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/edt_orgEvento" />
+        android:baselineAligned="false">
 
-    <!-- Data do Evento-->
+        <TextView
+            android:id="@+id/text_drop_femea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:text="@string/edt_nomeFemea"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/drop_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:minWidth="?android:attr/panelMenuListWidth"
+            android:spinnerMode="dropdown"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <!-- Data de Acasalamento-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,44 +92,32 @@
 
 
         <TextView
-            android:id="@+id/dataEvento"
+            android:id="@+id/data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="@string/edt_dataEvento"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:text="@string/edt_datadot"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/data_vac"
             style="@style/Widget.AppCompat.EditText"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="date" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tpo_evento"
+    <EditText
+        android:id="@+id/edt_nome_local"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/edt_tpo_evento"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20sp" />
-
-    <RadioButton
-        android:id="@+id/edt_eventoTpo1"
-        android:layout_marginStart="100dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/edt_eventoTpo1" />
-
-    <RadioButton
-        android:id="@+id/edt_eventoTpo2"
-        android:layout_marginStart="100dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/edt_eventoTpo2" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_nome_local" />
 
     <EditText
         android:id="@+id/edt_cidade"
@@ -142,28 +167,20 @@
         android:inputType="textPersonName"
         android:text="@string/edt_cep" />
 
-    <EditText
-        android:id="@+id/edt_fone1"
+    <CheckBox
+        android:id="@+id/edt_sucesso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text|phone"
-        android:text="@string/edt_fone1" />
-
-    <EditText
-        android:id="@+id/edt_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/edt_email" />
+        android:text="@string/edt_sucesso" />
 
     <Button
         android:id="@+id/button"
+        android:layout_marginTop="@dimen/fab_margin"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@android:color/holo_green_light"
         android:text="Cadastrar" />
+
 </LinearLayout>

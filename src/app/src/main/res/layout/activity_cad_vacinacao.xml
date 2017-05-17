@@ -42,21 +42,21 @@
 
         <TextView
             android:id="@+id/text_drop_nomeAnimal"
+            android:layout_marginTop="3sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/edt_nomeAnimal"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <Spinner
             android:id="@+id/drop_animal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
             android:minWidth="?android:attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <!-- nome da vacina em dropbox-->
@@ -72,19 +72,19 @@
             android:id="@+id/text_drop_vacina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="20sp"
+            android:layout_marginEnd="@dimen/fab_margin"
             android:layout_gravity="center_vertical"
             android:text="@string/edt_nome_vac"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <Spinner
             android:id="@+id/drop_cliente"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
             android:minWidth="?android:attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <!-- nome do veterinário em dropbox-->
@@ -100,20 +100,19 @@
             android:id="@+id/text_drop_vet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10sp"
             android:text="@string/edt_nomeVet"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <Spinner
             android:id="@+id/drop_veterinarios"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right
-"
             android:minWidth="?android:attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <!-- nome da Clínica em dropbox-->
@@ -129,16 +128,16 @@
             android:id="@+id/text_drop_clinica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/fab_margin"
             android:text="@string/edt_nome_clinica"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20dp" />
 
         <Spinner
             android:id="@+id/drop_nome_vet"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
             android:minWidth="?android:attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
             android:textSize="20dp" />
@@ -241,9 +240,8 @@
 
         <Spinner
             android:id="@+id/drop_vet"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
             android:minWidth="?android:attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
             android:textSize="20dp" />

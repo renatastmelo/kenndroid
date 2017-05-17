@@ -36,7 +36,6 @@
         android:baselineAligned="false"
         android:orientation="horizontal">
 
-
         <TextView
             android:id="@+id/edt_nome_campo_nasc"
             android:layout_width="wrap_content"
@@ -44,7 +43,7 @@
             android:textSize="20dp"
             android:layout_gravity="center_vertical"
             android:text="@string/edt_nome_campo_nasc"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
         <EditText
             android:id="@+id/dia"
@@ -53,8 +52,7 @@
             android:ems="10"
             android:inputType="numberSigned"
             android:baselineAligned="false"
-            android:orientation="horizontal"
-        />
+            android:orientation="horizontal"/>
 
         <EditText
             android:id="@+id/mes"
@@ -63,8 +61,7 @@
             android:ems="10"
             android:inputType="numberSigned"
             android:baselineAligned="false"
-            android:orientation="horizontal"
-        />
+            android:orientation="horizontal"/>
 
         <EditText
             android:id="@+id/ano"
@@ -73,9 +70,7 @@
             android:ems="10"
             android:inputType="numberSigned"
             android:baselineAligned="false"
-            android:orientation="horizontal"
-        />
-
+            android:orientation="horizontal"/>
     </LinearLayout>
 
     <!-- inicio do cadastro após a data -->
