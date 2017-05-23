@@ -25,7 +25,7 @@
             android:layout_width="374dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="@string/titulo_cadAniEvento" />
 
     </LinearLayout>
@@ -82,12 +82,10 @@
             android:layout_gravity="start"
             android:minWidth="?android:attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </LinearLayout>
-        />
 
     <!-- Checkboxs do tipo de evento-->
-
     <TextView
         android:id="@+id/edt_nomeEventotpo"
         android:layout_marginTop="5sp"
@@ -224,7 +222,7 @@
             android:id="@+id/edt_juizes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_gravity="center_vertical"
             android:text="@string/edt_juizes"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
@@ -246,6 +244,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="Cadastrar"
+        android:text="@string/btn_cadastrar"
         />
 </LinearLayout>

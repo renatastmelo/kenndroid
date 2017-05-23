@@ -123,7 +123,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textWebEmailAddress"
         android:text="@string/edt_email" />
 
     <Button
@@ -133,6 +133,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="Cadastrar" />
+        android:text="@string/btn_cadastrar" />
 
 </LinearLayout>

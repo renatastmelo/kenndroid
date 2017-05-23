@@ -181,6 +181,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="Cadastrar" />
+        android:text="@string/btn_cadastrar" />
 
 </LinearLayout>

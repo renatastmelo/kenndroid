@@ -11,6 +11,8 @@
     <string name="action_veterinarios">Veterinários</string>
     <string name="action_vacinas">Vacinas</string>
     <string name="action_eventos">Eventos</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+
 
     <!--tela de cadastro de Canil-->
     <string name="titulo_cad">Cadastro de Canil</string>
