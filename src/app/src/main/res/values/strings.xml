@@ -42,6 +42,9 @@
     <!--tela de cadastro de Acasalamento-->
     <string name="titulo_cadAcasala">Cadastro de Acasalamentos</string>
 
+    <!--tela de cadastro de Animal Evento-->
+    <string name="titulo_cadAniEvento">Cadastro de Animais em eventos</string>
+
     <!--campos de cadastros-->
     <string name="edt_nome">Nome</string>
     <string name="edt_cidade">Cidadde</string>
@@ -122,4 +125,14 @@
     <string name="edt_nome_local">Nome do Local</string>
     <string name="edt_sucesso">Sucesso &lt;3 </string>
 
+    <!--campos de cadastros extras de Cadastro de Animais em Eventos-->
+    <string name="edt_nomeEventotpo">Tipo de participação: </string>
+    <string name="edt_nomeAnimalEvento">Animal: </string>
+    <string name="edt_pontos">Pontos: </string>
+    <string name="edt_juizes">Juízes:</string>
+    <string name="edt_classificacao">Classificação: </string>
+    <string name="edt_penalizacao">Penalização: </string>
+    <string name="edt_percursos">Percursos</string>
+    <string name="edt_EventoAgility">Agility</string>
+    <string name="edt_EventoExposicao">Exposição</string>
 </resources>
