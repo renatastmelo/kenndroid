@@ -8,6 +8,6 @@ public class CadAnimal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cad_animal2);
+        setContentView(R.layout.cad_animal);
     }
 }

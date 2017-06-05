@@ -4,8 +4,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <?xml version="1.0" encoding="utf-8"?>
-
     <!-- Titulo da tela-->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -52,7 +50,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:minWidth="?android:attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
             android:textSize="20sp" />
     </LinearLayout>
@@ -80,7 +77,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:minWidth="?android:attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
             android:textSize="20sp" />
     </LinearLayout>

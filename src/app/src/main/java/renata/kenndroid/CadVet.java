@@ -8,6 +8,6 @@ public class CadVet extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cad_vet);
+        setContentView(R.layout.cad_vet);
     }
 }

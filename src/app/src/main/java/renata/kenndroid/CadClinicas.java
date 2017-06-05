@@ -8,6 +8,6 @@ public class CadClinicas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cad_clinicas);
+        setContentView(R.layout.cad_clinicas);
     }
 }

@@ -14,21 +14,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-    }
-
-    public void onActivityCreated (Bundle savedInstanceState) {
-        final MainActivity activity = this;
-        View v = (View) findViewById(R.id.action_canil);
-        v.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(activity, CadCanil.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -50,13 +38,52 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        Intent intent = null;
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_config) {
-            return true;
+        // Switch que verifica o item do menu selecionado e cria uma intent para abrir a janela
+        // correspondente.
+        switch (id)
+        {
+            case R.id.action_canil:
+                intent = new Intent(this, CadCanil.class);
+                break;
+
+            case R.id.action_animal:
+            intent = new Intent(this, CadAnimal.class);
+            break;
+
+            case R.id.action_clientes:
+                intent = new Intent(this, CadClientes.class);
+                break;
+
+            case R.id.action_eventos:
+                intent = new Intent(this, Cad_AnimalEvento.class);
+                break;
+
+            case R.id.action_vacinas:
+                intent = new Intent(this, CadVacinas.class);
+                break;
+
+            case R.id.action_veterinarios:
+                intent = new Intent(this, CadVet.class);
+                break;
+
+            case R.id.action_clinicas:
+                intent = new Intent(this, CadClinicas.class);
+                break;
+
+            case R.id.action_vendas:
+                intent = new Intent(this, CadVendas.class);
+                break;
+
+            case R.id.action_acasalamentos:
+                intent = new Intent(this, CadAcasalamento.class);
+                break;
         }
+        startActivity(intent);
+        return true;
 
-        return super.onOptionsItemSelected(item);
+        //return super.onOptionsItemSelected(item);
     }
 
 }

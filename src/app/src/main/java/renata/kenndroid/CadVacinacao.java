@@ -8,6 +8,6 @@ public class CadVacinacao extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cad_vacinacao);
+        setContentView(R.layout.cad_vacinacao);
     }
 }

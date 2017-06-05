@@ -8,6 +8,6 @@ public class CadEvento extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cad_evento);
+        setContentView(R.layout.cad_evento);
     }
 }
