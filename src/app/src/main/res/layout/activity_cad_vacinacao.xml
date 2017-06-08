@@ -54,7 +54,7 @@
             android:id="@+id/drop_animal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minWidth="?android:attr/panelMenuListWidth"
+            android:minWidth="?attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
             android:textSize="20sp" />
     </LinearLayout>
@@ -82,7 +82,7 @@
             android:id="@+id/drop_cliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minWidth="?android:attr/panelMenuListWidth"
+            android:minWidth="?attr/panelMenuListWidth" />
             android:spinnerMode="dropdown"
             android:textSize="20sp" />
     </LinearLayout>
@@ -110,7 +110,7 @@
             android:id="@+id/drop_veterinarios"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minWidth="?android:attr/panelMenuListWidth"
+            android:minWidth="?attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
             android:textSize="20sp" />
     </LinearLayout>
@@ -138,7 +138,7 @@
             android:id="@+id/drop_nome_vet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minWidth="?android:attr/panelMenuListWidth"
+            android:minWidth="?attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
             android:textSize="20dp" />
     </LinearLayout>
@@ -242,7 +242,7 @@
             android:id="@+id/drop_vet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minWidth="?android:attr/panelMenuListWidth"
+            android:minWidth="?attr/panelMenuListWidth"
             android:spinnerMode="dropdown"
             android:textSize="20dp" />
     </LinearLayout>

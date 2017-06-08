@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    app:layout_scrollFlags="scroll">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <!-- Titulo da tela-->
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
+        android:baselineAligned="false">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -24,8 +23,8 @@
             android:layout_width="374dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="@string/titulo_cadAnimal"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:text="@string/titulo_cadAnimal" />
 
     </LinearLayout>
 
@@ -36,7 +35,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome" />
+        android:text="@string/edt_nome"
+        />
 
     <!-- Data de nascimento -->
     <LinearLayout
@@ -50,10 +50,10 @@
             android:id="@+id/edt_nome_campo_nasc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:layout_gravity="center_vertical"
             android:text="@string/edt_nome_campo_nasc"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20sp" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
         <EditText
             android:id="@+id/data"
@@ -75,10 +75,10 @@
             android:id="@+id/edt_nome_campo_data_venda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:layout_gravity="center_vertical"
             android:text="@string/edt_nome_campo_data_venda"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20dp" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
         <EditText
             android:id="@+id/animal_data"
@@ -95,7 +95,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_pai" />
+        android:text="@string/edt_nome_pai"
+        />
 
     <EditText
         android:id="@+id/edt_nome_mae"
@@ -103,7 +104,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_mae" />
+        android:text="@string/edt_nome_mae"
+        />
 
     <EditText
         android:id="@+id/edt_nome_canil"
@@ -111,7 +113,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_canil" />
+        android:text="@string/edt_nome_canil"
+        />
 
     <EditText
         android:id="@+id/edt_nome_compradorl"
@@ -119,7 +122,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_comprador" />
+        android:text="@string/edt_nome_comprador"
+        />
 
     <!-- Foto -->
     <LinearLayout
@@ -133,10 +137,10 @@
             android:id="@+id/edt_foto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:layout_gravity="center_vertical"
             android:text="@string/edt_foto"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20dp" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -155,5 +159,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="Cadastrar" />
+        android:text="Cadastrar"
+        />
 </LinearLayout>
