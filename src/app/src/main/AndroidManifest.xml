@@ -28,7 +28,7 @@
         <activity android:name=".CadClinicas" />
         <activity android:name=".CadVacinacao" />
         <activity android:name=".CadEvento" />
-        <activity android:name=".CadAcasalamento" />
+        <activity android:name=".CadCruzamento" />
         <activity android:name=".Cad_AnimalEvento"></activity>
     </application>
 

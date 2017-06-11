@@ -4,7 +4,7 @@
     <string name="action_config">Configurações</string>
     <string name="action_canil">Canil</string>
     <string name="action_animal">Animais</string>
-    <string name="action_acasalamentos">Acasalamentos</string>
+    <string name="action_cruzamento">Cruzamento</string>
     <string name="action_vendas">Vendas</string>
     <string name="action_clientes">Clientes</string>
     <string name="action_clinicas">Clinicas</string>
@@ -41,8 +41,8 @@
     <!--tela de cadastro de Eventos-->
     <string name="titulo_cadEvento">Cadastro de Evento</string>
 
-    <!--tela de cadastro de Acasalamento-->
-    <string name="titulo_cadAcasala">Cadastro de Acasalamentos</string>
+    <!--tela de cadastro de Cruzamentos-->
+    <string name="titulo_cadAcasala">Cadastro de Cruzamentos</string>
 
     <!--tela de cadastro de Animal Evento-->
     <string name="titulo_cadAniEvento">Cadastro de Animais em eventos</string>
@@ -120,7 +120,7 @@
     <string name="edt_eventoTpo1">Exposição</string>
     <string name="edt_eventoTpo2">Agility</string>
 
-    <!--campos de cadastros extras de Cadastro de Acasalamentos-->
+    <!--campos de cadastros extras de Cadastro de Cruzamentos-->
     <string name="edt_nomeMacho">Macho: </string>
     <string name="edt_nomeFemea">Fêmea: </string>
     <string name="edt_datadot">Data: </string>

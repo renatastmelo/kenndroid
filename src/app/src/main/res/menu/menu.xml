@@ -26,10 +26,10 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_acasalamentos"
+        android:id="@+id/action_cruzamento"
         android:orderInCategory="100"
-        android:icon="@drawable/ic_acasalamento"
-        android:title="@string/action_acasalamentos"
+        android:icon="@drawable/ic_cruzamento"
+        android:title="@string/action_cruzamento"
         app:showAsAction="never" />
 
     <item

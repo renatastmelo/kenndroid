@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -76,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, CadVendas.class);
                 break;
 
-            case R.id.action_acasalamentos:
-                intent = new Intent(this, CadAcasalamento.class);
+            case R.id.action_cruzamento:
+                intent = new Intent(this, CadCruzamento.class);
                 break;
         }
         startActivity(intent);
