@@ -29,7 +29,7 @@
         <activity android:name=".CadVacinacao" />
         <activity android:name=".CadEvento" />
         <activity android:name=".CadCruzamento" />
-        <activity android:name=".Cad_AnimalEvento"></activity>
+        <activity android:name=".CadAnimalEvento"></activity>
     </application>
 
 </manifest>

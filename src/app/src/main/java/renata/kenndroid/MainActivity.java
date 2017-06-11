@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_eventos:
-                intent = new Intent(this, Cad_AnimalEvento.class);
+                intent = new Intent(this, CadAnimalEvento.class);
                 break;
 
             case R.id.action_vacinas:
