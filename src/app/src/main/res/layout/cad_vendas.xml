@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_animal" />
+        android:hint="@string/edt_nome_animal" />
 
     <EditText
         android:id="@+id/edt_nome_cliente"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_cliente" />
+        android:hint="@string/edt_nome_cliente" />
 
     <EditText
         android:id="@+id/edt_dt"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_dt" />
+        android:hint="@string/edt_dt" />
 
     <EditText
         android:id="@+id/edt_entrega_pedigree"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_entrega_pedigree" />
+        android:hint="@string/edt_entrega_pedigree" />
 
     <EditText
         android:id="@+id/edt_forma_pgto"
@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_forma_pgto" />
+        android:hint="@string/edt_forma_pgto" />
 
     <CheckBox
         android:id="@+id/edt_nota_fiscal"
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/edt_valor" />
+        android:hint="@string/edt_valor" />
 
     <EditText
         android:id="@+id/edt_valor_recebido"
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/edt_valor_recebido" />
+        android:hint="@string/edt_valor_recebido" />
 
     <EditText
         android:id="@+id/edt_dt_ult_pgto"
@@ -101,7 +101,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_dt_ult_pgto" />
+        android:hint="@string/edt_dt_ult_pgto" />
 
 
     <EditText
@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_fone1" />
+        android:hint="@string/edt_fone1" />
 
     <EditText
         android:id="@+id/edt_fone2"
@@ -118,7 +118,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_fone2" />
+        android:hint="@string/edt_fone2" />
 
     <EditText
         android:id="@+id/edt_email"
@@ -126,7 +126,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textWebEmailAddress"
-        android:text="@string/edt_email" />
+        android:hint="@string/edt_email" />
 
     <Button
         android:id="@+id/button"

@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome"
+        android:hint="@string/edt_nome"
         />
 
     <!-- Data de nascimento -->
@@ -101,7 +101,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_pai"
+        android:hint="@string/edt_nome_pai"
         />
 
     <EditText
@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_mae"
+        android:hint="@string/edt_nome_mae"
         />
 
     <EditText
@@ -119,19 +119,18 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_canil"
+        android:hint="@string/edt_nome_canil"
         />
 
-    <EditText
-        android:id="@+id/edt_nome_compradorl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/edt_nome_comprador"
-        />
+        <EditText
+            android:id="@+id/edt_nome_compradorl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/edt_nome_comprador" />
 
-    <!-- Foto -->
+        <!-- Foto -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

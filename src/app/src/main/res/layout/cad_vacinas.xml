@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:ems="16"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_vac"
+        android:hint="@string/edt_nome_vac"
      />
 
     <EditText
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:ems="16"
         android:inputType="textPersonName"
-        android:text="@string/edt_descricao"
+        android:hint="@string/edt_descricao"
      />
 
     <Button

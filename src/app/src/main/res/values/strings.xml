@@ -99,7 +99,7 @@
     <string name="edt_foto">Foto: </string>
 
     <!--campos de cadastros extras de Cadastro de Vacinas-->
-    <string name="edt_nome_vac">Vacina: </string>
+    <string name="edt_nome_vac">Vacina</string>
 
     <!--campos de cadastros extras de Cadastro de Vacinações realizadas-->
     <string name="edt_m_vac">Marca da Vacina</string>

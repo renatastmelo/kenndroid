@@ -201,7 +201,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_m_vac" />
+        android:hint="@string/edt_m_vac" />
 
     <EditText
         android:id="@+id/edt_lote"
@@ -209,7 +209,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_lote" />
+        android:hint="@string/edt_lote" />
 
     <EditText
         android:id="@+id/edt_reacao_adversa"
@@ -217,7 +217,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/edt_reac_adv" />
+        android:hint="@string/edt_reac_adv" />
 
     <!-- nome do veterinário em dropbox-->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -234,7 +234,7 @@
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:layout_gravity="center_vertical"
-            android:text="@string/edt_nomeVet"
+            android:hint="@string/edt_nomeVet"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <Spinner
@@ -280,7 +280,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_obs" />
+        android:hint="@string/edt_obs" />
 
     <Button
         android:id="@+id/button"

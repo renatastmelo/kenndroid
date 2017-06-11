@@ -120,7 +120,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome_local" />
+        android:hint="@string/edt_nome_local" />
 
     <EditText
         android:id="@+id/edt_cidade"
@@ -128,7 +128,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_cidade" />
+        android:hint="@string/edt_cidade" />
 
     <EditText
         android:id="@+id/edt_estado"
@@ -136,7 +136,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_estado" />
+        android:hint="@string/edt_estado" />
 
     <EditText
         android:id="@+id/edt_end"
@@ -144,7 +144,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_end" />
+        android:hint="@string/edt_end" />
 
     <EditText
         android:id="@+id/edt_compl"
@@ -152,7 +152,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_compl" />
+        android:hint="@string/edt_compl" />
 
     <EditText
         android:id="@+id/edt_pt_ref"
@@ -160,7 +160,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_pt_ref" />
+        android:hint="@string/edt_pt_ref" />
 
     <EditText
         android:id="@+id/edt_cep"
@@ -168,7 +168,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_cep" />
+        android:hint="@string/edt_cep" />
 
     <CheckBox
         android:id="@+id/edt_sucesso"

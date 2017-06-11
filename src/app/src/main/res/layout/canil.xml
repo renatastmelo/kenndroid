@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_nome" />
+        android:hint="@string/edt_nome" />
 
     <EditText
         android:id="@+id/edt_cidade"
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_cidade" />
+        android:hint="@string/edt_cidade" />
 
     <EditText
         android:id="@+id/edt_estado"
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_estado" />
+        android:hint="@string/edt_estado" />
 
     <EditText
         android:id="@+id/edt_end"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_end" />
+        android:hint="@string/edt_end" />
 
     <EditText
         android:id="@+id/edt_compl"
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_compl" />
+        android:hint="@string/edt_compl" />
 
     <EditText
         android:id="@+id/edt_pt_ref"
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_pt_ref" />
+        android:hint="@string/edt_pt_ref" />
 
     <EditText
         android:id="@+id/edt_cep"
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_cep" />
+        android:hint="@string/edt_cep" />
 
     <EditText
         android:id="@+id/edt_dataFund"
@@ -94,7 +94,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_dataFund" />
+        android:hint="@string/edt_dataFund" />
 
     <EditText
         android:id="@+id/edt_cnpj"
@@ -102,7 +102,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_cnpj" />
+        android:hint="@string/edt_cnpj" />
 
     <EditText
         android:id="@+id/edt_razao_social"
@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_razao_social" />
+        android:hint="@string/edt_razao_social" />
 
     <EditText
         android:id="@+id/edt_fone1"
@@ -118,7 +118,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text|phone"
-        android:text="@string/edt_fone1" />
+        android:hint="@string/edt_fone1" />
 
     <EditText
         android:id="@+id/edt_fone2"
@@ -126,7 +126,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text|phone"
-        android:text="@string/edt_fone2" />
+        android:hint="@string/edt_fone2" />
 
     <EditText
         android:id="@+id/edt_email"
@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="@string/edt_email" />
+        android:hint="@string/edt_email" />
 
     <Button
         android:id="@+id/button"
@@ -143,6 +143,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="@string/btn_cadastrar" />
+        android:hint="@string/btn_cadastrar" />
     </LinearLayout>
 </ScrollView>
