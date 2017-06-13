@@ -49,6 +49,11 @@ public class Evento {
             "DROP TABLE IF EXISTS Evento";
 
 
+    public Evento()
+    {
+        this.id = 0;
+    }
+
     public void save(SQLiteDatabase db)
     {
         // TODO: esse método vai salvar o registro no banco

@@ -10,7 +10,7 @@ import java.util.List;
  */
 
 public class Cliente {
-        public int id;
+        public long id;
         public String nome;
         public String dia_nasc;
         public String mes_nasc;
@@ -51,6 +51,10 @@ public class Cliente {
     public static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS Canil";
 
+    public Cliente()
+    {
+        this.id = 0;
+    }
 
     public void save(SQLiteDatabase db)
     {

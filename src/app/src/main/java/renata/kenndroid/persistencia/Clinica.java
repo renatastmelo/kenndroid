@@ -49,6 +49,11 @@ public class Clinica {
             "DROP TABLE IF EXISTS Clinica";
 
 
+    public Clinica()
+    {
+        this.id = 0;
+    }
+
     public void save(SQLiteDatabase db)
     {
         // TODO: esse método vai salvar o registro no banco

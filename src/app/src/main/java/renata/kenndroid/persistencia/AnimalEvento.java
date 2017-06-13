@@ -11,7 +11,7 @@ import java.util.List;
  */
 
 public class AnimalEvento {
-    public int id;
+    public long id;
     public int id_Evento;
     public String categoria;
     public String classificacao;
@@ -38,6 +38,10 @@ public class AnimalEvento {
     public static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS AnimalEvento";
 
+    public AnimalEvento()
+    {
+        this.id = 0;
+    }
 
     public void save(SQLiteDatabase db)
     {

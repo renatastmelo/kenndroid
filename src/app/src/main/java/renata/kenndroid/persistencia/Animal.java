@@ -11,7 +11,7 @@ import java.util.List;
  */
 
 public class Animal {
-    public int id;
+    public long id;
     public String nome;
     public String data_nasc;
     public int pai;
@@ -38,6 +38,11 @@ public class Animal {
 
     public static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS Animal";
+
+    public Animal()
+    {
+        this.id = 0;
+    }
 
     public void save(SQLiteDatabase db)
     {

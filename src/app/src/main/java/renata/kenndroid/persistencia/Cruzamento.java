@@ -1,5 +1,6 @@
 package renata.kenndroid.persistencia;
 
+import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
@@ -11,9 +12,9 @@ import java.util.List;
  */
 
 public class Cruzamento {
-    public int id;
-    public int macho;
-    public int femea;
+    public long id;
+    public Animal macho;
+    public Animal femea;
     public String data;
     public String nome_local;
     public String cidade;
@@ -21,8 +22,8 @@ public class Cruzamento {
     public String endereco;
     public String complemento;
     public String ponto_ref;
-    public int cep;
-    public String sucesso;
+    public Integer cep;
+    public Boolean sucesso;
 
     public static final String TABLE_NAME ="Cruzamento";
 
@@ -46,10 +47,38 @@ public class Cruzamento {
     public static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS Cruzamento";
 
+    public Cruzamento()
+    {
+        this.id = 0;
+    }
 
     public void save(SQLiteDatabase db)
     {
-        // TODO: esse método vai salvar o registro no banco
+        ContentValues valores = new ContentValues();
+
+        if (this.macho != null) valores.put("macho", this.macho.id);
+        if (this.femea != null) valores.put("femea", this.femea.id);
+        if (this.data != null) valores.put("data", this.data);
+        if (this.nome_local != null) valores.put("nome_local", this.nome_local);
+        if (this.cidade != null) valores.put("cidade", this.cidade);
+        if (this.estado != null) valores.put("estado", this.estado);
+        if (this.endereco != null) valores.put("endereco", this.endereco);
+        if (this.complemento != null) valores.put("complemento", this.complemento);
+        if (this.ponto_ref != null) valores.put("pont_ref", this.ponto_ref);
+        if (this.cep != null) valores.put("cep", this.cep);
+        if (this.sucesso != null) valores.put("sucesso", this.sucesso ? 1 : 0);
+
+        if (this.id != 0) {
+            valores.put("id", this.id);
+        }
+
+        long idnovo = db.insertWithOnConflict("vacina", null, valores, SQLiteDatabase.CONFLICT_IGNORE);
+
+        if (idnovo == -1) {
+            db.update("vacina", valores, "id=?", new String[] { Long.toString(this.id) });
+        }else {
+            this.id = idnovo;
+        }
     }
 
     public static Cruzamento load(SQLiteDatabase db, int id)

@@ -44,7 +44,10 @@ public class Venda {
     public static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS Venda";
 
-
+    public Venda()
+    {
+        this.id = 0;
+    }
 
     // TODO: fazer as listagem de telas para obter ids extrageiros
     public void save(SQLiteDatabase db)

@@ -11,7 +11,7 @@ import java.util.List;
  */
 
 public class Veterinario {
-    public int id;
+    public long id;
     public String cpf;
     public String nome;
     public String especialidade;
@@ -48,7 +48,11 @@ public class Veterinario {
     public static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS Veterinario";
 
-
+    public Veterinario()
+    {
+        this.id = 0;
+    }
+    
     public void save(SQLiteDatabase db)
     {
         // TODO: esse método vai salvar o registro no banco

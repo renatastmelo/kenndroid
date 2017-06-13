@@ -46,6 +46,11 @@ public class Vacinacao {
     public static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS Clinica";
 
+    public Vacinacao()
+    {
+        this.id = 0;
+    }
+
     // TODO: fazer as listagem de telas para obter ids do itens selecionado pelo usuário
     public void save(SQLiteDatabase db)
     {
