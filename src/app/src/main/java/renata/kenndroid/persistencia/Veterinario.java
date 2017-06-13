@@ -3,6 +3,7 @@ package renata.kenndroid.persistencia;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -59,10 +60,9 @@ public class Veterinario {
         return null;
     }
 
-    public static ArrayList<Veterinario> all(SQLiteDatabase db)
+    public static void all(SQLiteDatabase db, List<Veterinario> lista)
     {
         // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
-        return null;
     }
 
     //TODO: conferir no requisito quais as pesqueisas especificadas

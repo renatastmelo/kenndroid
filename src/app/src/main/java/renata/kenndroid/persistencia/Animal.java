@@ -4,6 +4,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * classe que representa um animal
@@ -49,10 +50,9 @@ public class Animal {
         return null;
     }
 
-    public static ArrayList<Animal> all(SQLiteDatabase db)
+    public static void all(SQLiteDatabase db, List<Animal> lista)
     {
         // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
-        return null;
     }
 
     //TODO: conferir no requisito quais as pesqueisas especificadas

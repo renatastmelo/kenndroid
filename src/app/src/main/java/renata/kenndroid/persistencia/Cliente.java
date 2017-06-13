@@ -3,6 +3,7 @@ package renata.kenndroid.persistencia;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Classe que representa um Cliente.
@@ -62,10 +63,9 @@ public class Cliente {
         return null;
     }
 
-    public static ArrayList<Cliente> all(SQLiteDatabase db)
+    public static void all(SQLiteDatabase db, List<Cliente> lista)
     {
         // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
-        return null;
     }
 
     //TODO: conferir no requisito quais as pesqueisas especificadas

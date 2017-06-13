@@ -3,6 +3,7 @@ package renata.kenndroid.persistencia;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -59,10 +60,9 @@ public class Evento {
         return null;
     }
 
-    public static ArrayList<Evento> all(SQLiteDatabase db)
+    public static void all(SQLiteDatabase db, List<Evento> lista)
     {
         // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
-        return null;
     }
 
     //TODO: conferir no requisito quais as pesqueisas especificadas
