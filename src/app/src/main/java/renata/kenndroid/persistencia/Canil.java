@@ -78,10 +78,10 @@ public class Canil {
             valores.put("id", this.id);
         }
 
-        long id = db.insertWithOnConflict("canil", null, valores, SQLiteDatabase.CONFLICT_IGNORE);
+        long id = db.insertWithOnConflict("cad_canil", null, valores, SQLiteDatabase.CONFLICT_IGNORE);
 
         if (id == -1) {
-            db.update("canil", valores, "id=?", new String[] { Long.toString(this.id) });
+            db.update("cad_canil", valores, "id=?", new String[] { Long.toString(this.id) });
         }else {
             this.id = id;
         }

@@ -29,7 +29,7 @@ public class Animal {
             "data_nasc		TEXT		NULL,"+
             "pai			INTEGER		NOT NULL,"+
             "mae			INTEGER		NOT NULL,"+
-            "canil			INTEGER		NOT NULL,"+
+            "cad_canil			INTEGER		NOT NULL,"+
             "comprador		INTEGER		NULL,"+
             "data_venda		TEXT		NULL,"+
             "foto			BLOB		NULL"+

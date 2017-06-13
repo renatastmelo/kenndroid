@@ -11,7 +11,7 @@ public class CadCanil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.canil);
+        setContentView(R.layout.cad_canil);
     }
     public void colocarDadosDaTelaNaPersistencia(Canil can) {
         EditText edt;

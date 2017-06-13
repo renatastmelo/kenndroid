@@ -238,16 +238,28 @@
             android:inputType="textMultiLine" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:text="@string/btn_cadastrar"
-        />
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/salvar"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="@string/btn_cadastrar" />
+            <Button
+                android:id="@+id/apagar"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:text="Apagar"
+                android:visibility="gone"/>
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
