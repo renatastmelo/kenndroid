@@ -1,6 +1,5 @@
 package renata.kenndroid.listas;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.design.widget.FloatingActionButton;
@@ -15,22 +14,20 @@ import java.util.List;
 
 import renata.kenndroid.KenndroidDb;
 import renata.kenndroid.R;
-import renata.kenndroid.adapters.AdapterVacina;
-import renata.kenndroid.cadastro.CadVacinas;
-import renata.kenndroid.persistencia.Vacina;
+import renata.kenndroid.cadastro.CadCanil;
+import renata.kenndroid.persistencia.Canil;
 
-public class ListaVacina extends AppCompatActivity {
-
+public class ListaCanil extends AppCompatActivity {
     // Código de Solicitação de Cadastro para a tela de Cadastro
     public static final int RES_CADASTRO = 1;
     // Código de Solicitação de Edição para a tela de Cadastro
     public static final int RES_EDICAO = 2;
 
-    private List<Vacina> vacinas;
+    List<Canil> canis;
 
     private View.OnClickListener AddListener = new View.OnClickListener() {
         public void onClick(View v) {
-            Intent intent = new Intent(ListaVacina.this, CadVacinas.class);
+            Intent intent = new Intent(ListaCanil.this, CadCanil.class);
             intent.putExtra("comando", "criar");
             startActivityForResult(intent, RES_CADASTRO);
         }
@@ -39,44 +36,19 @@ public class ListaVacina extends AppCompatActivity {
     private AdapterView.OnItemClickListener ItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent intent = new Intent(ListaVacina.this, CadVacinas.class);
+            Intent intent = new Intent(ListaCanil.this, CadCanil.class);
             intent.putExtra("comando", "editar");
             intent.putExtra("id", id);
             startActivityForResult(intent, RES_EDICAO);
         }
     };
 
-
-    public void carregarVacinas()
+    public void carregarCanis()
     {
-        this.vacinas.clear();
+        this.canis.clear();
         SQLiteDatabase db = KenndroidDb.getInstance(this).getWritableDatabase();
-        Vacina.all(db, this.vacinas);
+        Canil.all(db, this.canis);
         db.close();
-    }
-
-    /**
-     * Trata o retorno/resultado quando o usuáio sai da tela de Cadastro.
-     * @param requestCode Código da Solicitação
-     *   - RES_CADASTRO - quando foi clicando no botão (+) de cadastrar
-     *   - RES_EDICAO - quando foi clicando em um item na lista para editar.
-     * @param resultCode Código de resultado, se foi RESULT_OK ou se foi cancelado.
-     * @param data Dados retornados (atualmente nenhum).
-     */
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        switch(requestCode)
-        {
-            case RES_CADASTRO: // Tratar Retorno do Cadastro de Vacina
-            case RES_EDICAO:   // Tratar Retorno da Edição de Vacina igual ao cadastro
-                if (resultCode == Activity.RESULT_OK) {
-                    carregarVacinas();
-                    ListView listaDeVacinas = (ListView) findViewById(R.id.lista);
-                    listaDeVacinas.invalidateViews();
-                }
-                break;
-        }
     }
 
     @Override
@@ -85,25 +57,25 @@ public class ListaVacina extends AppCompatActivity {
         setContentView(R.layout.activity_lista);
 
         // Criar lista para armazenar as vacinas em memoria.
-        this.vacinas = new ArrayList<Vacina>();
+        this.canis = new ArrayList<Canil>();
 
         // Setar o Listener do Botão de Adicionar
         FloatingActionButton btnAdd = (FloatingActionButton) findViewById(R.id.btn_add);
         btnAdd.setOnClickListener(AddListener);
 
         // Carregar a lista de vacinas usando o método loadAll da classe de persistência.
-        carregarVacinas();
+        carregarCanis();
 
         // Encontrar o controle ListView da tela.
-        ListView listaDeVacinas = (ListView) findViewById(R.id.lista);
+        ListView lista = (ListView) findViewById(R.id.lista);
 
         // Setar o ItemClickListener da lista para receber os clicks em itens.
-        listaDeVacinas.setOnItemClickListener(ItemClickListener);
+        lista.setOnItemClickListener(ItemClickListener);
 
         // Criar o adapter com a lista de vacinas definida na classe, usando essa própria activity.
-        AdapterVacina adapter = new AdapterVacina(this.vacinas, this);
+        //  AdapterCanil adapter = new AdapterCanil(this.vacinas, this);
 
         // Setar o adapter da ListView da tela
-        listaDeVacinas.setAdapter(adapter);
+        //lista.setAdapter(adapter);
     }
 }

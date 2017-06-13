@@ -30,7 +30,14 @@
         <activity android:name=".cadastro.CadEvento" />
         <activity android:name=".cadastro.CadCruzamento" />
         <activity android:name=".cadastro.CadAnimalEvento" />
-        <activity android:name=".listas.ListaVacina"></activity>
+        <activity android:name=".listas.ListaVacina" />
+        <activity android:name=".listas.ListaAnimal" />
+        <activity android:name=".listas.ListaCanil" />
+        <activity android:name=".listas.ListaCliente" />
+        <activity android:name=".listas.ListaClinica" />
+        <activity android:name=".listas.ListaEvento" />
+        <activity android:name=".listas.ListaVenda" />
+        <activity android:name=".listas.ListaVeterinario"></activity>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Classe que representa um Canil
@@ -93,7 +94,7 @@ public class Canil {
         return null;
     }
 
-    public static ArrayList<Canil> all(SQLiteDatabase db)
+    public static void all(SQLiteDatabase db, List<Canil> canis)
     {
         // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
         return null;
