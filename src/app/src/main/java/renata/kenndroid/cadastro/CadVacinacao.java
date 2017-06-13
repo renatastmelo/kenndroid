@@ -1,9 +1,10 @@
-package renata.kenndroid;
+package renata.kenndroid.cadastro;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
+import renata.kenndroid.R;
 import renata.kenndroid.persistencia.Vacinacao;
 
 public class CadVacinacao extends AppCompatActivity {

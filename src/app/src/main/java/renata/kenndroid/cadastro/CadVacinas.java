@@ -1,4 +1,4 @@
-package renata.kenndroid;
+package renata.kenndroid.cadastro;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import renata.kenndroid.KenndroidDb;
+import renata.kenndroid.R;
 import renata.kenndroid.persistencia.Vacina;
 
 public class CadVacinas extends AppCompatActivity {

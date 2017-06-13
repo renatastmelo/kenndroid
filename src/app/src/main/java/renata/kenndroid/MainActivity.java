@@ -8,6 +8,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import renata.kenndroid.cadastro.CadAnimal;
+import renata.kenndroid.cadastro.CadAnimalEvento;
+import renata.kenndroid.cadastro.CadCanil;
+import renata.kenndroid.cadastro.CadClientes;
+import renata.kenndroid.cadastro.CadClinicas;
+import renata.kenndroid.cadastro.CadCruzamento;
+import renata.kenndroid.cadastro.CadVendas;
+import renata.kenndroid.cadastro.CadVet;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

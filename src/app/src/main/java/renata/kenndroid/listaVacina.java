@@ -9,12 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import renata.kenndroid.adapters.AdapterVacina;
+import renata.kenndroid.cadastro.CadVacinas;
 import renata.kenndroid.persistencia.Vacina;
 
 public class ListaVacina extends AppCompatActivity {

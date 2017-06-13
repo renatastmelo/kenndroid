@@ -1,7 +1,9 @@
-package renata.kenndroid;
+package renata.kenndroid.cadastro;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import renata.kenndroid.R;
 
 public class CadEvento extends AppCompatActivity {
 

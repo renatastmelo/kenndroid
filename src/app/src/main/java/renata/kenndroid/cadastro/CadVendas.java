@@ -1,4 +1,4 @@
-package renata.kenndroid;
+package renata.kenndroid.cadastro;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import renata.kenndroid.R;
 import renata.kenndroid.persistencia.Venda;
 
 public class CadVendas extends AppCompatActivity {
