@@ -1,9 +1,8 @@
-package renata.kenndroid;
+package renata.kenndroid.persistencia;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 
 /**

@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
+import renata.kenndroid.persistencia.Vacinacao;
+
 public class CadVacinacao extends AppCompatActivity {
 
     @Override

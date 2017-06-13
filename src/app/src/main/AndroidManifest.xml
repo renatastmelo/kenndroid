@@ -30,7 +30,7 @@
         <activity android:name=".CadEvento" />
         <activity android:name=".CadCruzamento" />
         <activity android:name=".CadAnimalEvento" />
-        <activity android:name=".listaVacina"></activity>
+        <activity android:name=".ListaVacina"></activity>
     </application>
 
 </manifest>

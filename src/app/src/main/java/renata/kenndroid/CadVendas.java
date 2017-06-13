@@ -6,6 +6,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import renata.kenndroid.persistencia.Venda;
+
 public class CadVendas extends AppCompatActivity {
 
     @Override

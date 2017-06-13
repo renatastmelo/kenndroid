@@ -1,11 +1,9 @@
-package renata.kenndroid;
+package renata.kenndroid.persistencia;
 
 import android.database.sqlite.SQLiteDatabase;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
-
-import static android.R.attr.id;
 
 /**
  * classe que representa um animal

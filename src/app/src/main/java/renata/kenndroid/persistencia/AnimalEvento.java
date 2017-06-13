@@ -1,4 +1,4 @@
-package renata.kenndroid;
+package renata.kenndroid.persistencia;
 
 import android.database.sqlite.SQLiteDatabase;
 

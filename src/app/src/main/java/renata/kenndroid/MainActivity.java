@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_vacinas:
-                intent = new Intent(this, CadVacinas.class);
+                intent = new Intent(this, ListaVacina.class);
                 break;
 
             case R.id.action_veterinarios:

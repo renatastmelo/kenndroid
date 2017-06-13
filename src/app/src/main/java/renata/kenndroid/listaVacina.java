@@ -1,13 +1,105 @@
 package renata.kenndroid;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
-public class listaVacina extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+import renata.kenndroid.adapters.AdapterVacina;
+import renata.kenndroid.persistencia.Vacina;
+
+public class ListaVacina extends AppCompatActivity {
+
+    public static final int RES_CADASTRO = 1;
+    public static final int RES_EDICAO = 2;
+
+    private List<Vacina> vacinas;
+
+    private View.OnClickListener AddListener = new View.OnClickListener() {
+        public void onClick(View v) {
+            Intent intent = new Intent(ListaVacina.this, CadVacinas.class);
+            intent.putExtra("comando", "criar");
+            startActivityForResult(intent, RES_CADASTRO);
+        }
+    };
+
+    private AdapterView.OnItemClickListener ItemClickListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Intent intent = new Intent(ListaVacina.this, CadVacinas.class);
+            intent.putExtra("comando", "editar");
+            intent.putExtra("id", id);
+            startActivityForResult(intent, RES_EDICAO);
+        }
+    };
+
+
+    public void carregarVacinas()
+    {
+        this.vacinas.clear();
+        SQLiteDatabase db = KenndroidDb.getInstance(this).getWritableDatabase();
+        Vacina.all(db, this.vacinas);
+        db.close();
+    }
+
+    /**
+     * Trata o retorno/resultado quando o usuáio sai da tela de Cadastro.
+     * @param requestCode Código da Solicitação
+     *   - RES_CADASTRO - quando foi clicando no botão (+) de cadastrar
+     *   - RES_EDICAO - quando foi clicando em um item na lista para editar.
+     * @param resultCode Código de resultado, se foi RESULT_OK ou se foi cancelado.
+     * @param data Dados retornados (atualmente nenhum).
+     */
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch(requestCode)
+        {
+            case RES_CADASTRO: // Tratar Retorno do Cadastro de Vacina
+            case RES_EDICAO:   // Tratar Retorno da Edição de Vacina igual ao cadastro
+                if (resultCode == Activity.RESULT_OK) {
+                    carregarVacinas();
+                    ListView listaDeVacinas = (ListView) findViewById(R.id.lst_vacinas);
+                    listaDeVacinas.invalidateViews();
+                }
+                break;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_vacina);
+
+        // Criar lista para armazenar as vacinas em memoria.
+        this.vacinas = new ArrayList<Vacina>();
+
+        // Setar o Listener do Botão de Adicionar
+        FloatingActionButton btnAdd = (FloatingActionButton) findViewById(R.id.btn_add);
+        btnAdd.setOnClickListener(AddListener);
+
+        // Carregar a lista de vacinas usando o método loadAll da classe de persistência.
+        carregarVacinas();
+
+        // Encontrar o controle ListView da tela.
+        ListView listaDeVacinas = (ListView) findViewById(R.id.lst_vacinas);
+
+        // Setar o ItemClickListener da lista para receber os clicks em itens.
+        listaDeVacinas.setOnItemClickListener(ItemClickListener);
+
+        // Criar o adapter com a lista de vacinas definida na classe, usando essa própria activity.
+        AdapterVacina adapter = new AdapterVacina(this.vacinas, this);
+
+        // Setar o adapter da ListView da tela
+        listaDeVacinas.setAdapter(adapter);
     }
 }

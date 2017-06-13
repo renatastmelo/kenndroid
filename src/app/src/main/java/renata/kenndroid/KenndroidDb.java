@@ -4,6 +4,17 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import renata.kenndroid.persistencia.Animal;
+import renata.kenndroid.persistencia.AnimalEvento;
+import renata.kenndroid.persistencia.Canil;
+import renata.kenndroid.persistencia.Cliente;
+import renata.kenndroid.persistencia.Clinica;
+import renata.kenndroid.persistencia.Cruzamento;
+import renata.kenndroid.persistencia.Vacina;
+import renata.kenndroid.persistencia.Vacinacao;
+import renata.kenndroid.persistencia.Venda;
+import renata.kenndroid.persistencia.Veterinario;
+
 /**
  * Created by Renata on 12/06/2017.
  */
