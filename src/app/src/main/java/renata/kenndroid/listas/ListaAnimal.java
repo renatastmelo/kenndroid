@@ -15,6 +15,7 @@ import java.util.List;
 
 import renata.kenndroid.KenndroidDb;
 import renata.kenndroid.R;
+import renata.kenndroid.adapters.AdapterAnimal;
 import renata.kenndroid.cadastro.CadAnimal;
 import renata.kenndroid.persistencia.Animal;
 

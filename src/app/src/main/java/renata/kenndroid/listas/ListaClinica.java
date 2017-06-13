@@ -15,6 +15,7 @@ import java.util.List;
 
 import renata.kenndroid.KenndroidDb;
 import renata.kenndroid.R;
+import renata.kenndroid.adapters.AdapterClinica;
 import renata.kenndroid.cadastro.CadClinicas;
 import renata.kenndroid.persistencia.Clinica;
 

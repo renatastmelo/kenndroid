@@ -15,6 +15,7 @@ import java.util.List;
 
 import renata.kenndroid.KenndroidDb;
 import renata.kenndroid.R;
+import renata.kenndroid.adapters.AdapterEvento;
 import renata.kenndroid.cadastro.CadEvento;
 import renata.kenndroid.persistencia.Evento;
 

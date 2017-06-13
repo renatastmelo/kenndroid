@@ -15,6 +15,7 @@ import java.util.List;
 
 import renata.kenndroid.KenndroidDb;
 import renata.kenndroid.R;
+import renata.kenndroid.adapters.AdapterVenda;
 import renata.kenndroid.cadastro.CadVendas;
 import renata.kenndroid.persistencia.Venda;
 
