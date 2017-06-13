@@ -21,7 +21,7 @@ public class Animal {
     public String data_venda;
     public ByteBuffer foto;
 
-    public static final String TABLE_NAME ="Animal";
+    public static final String TABLE_NAME = "animal";
 
     public static final String SQL_CREATE_TABLE =
         "CREATE TABLE Animal (" +

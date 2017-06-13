@@ -94,6 +94,7 @@ public class Vacina {
             return null;
         }
 
+        // Ler primeiro e único item
         resposta.moveToFirst();
         Vacina vac = lerItem(resposta);
         resposta.close();

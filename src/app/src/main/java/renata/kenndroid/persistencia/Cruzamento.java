@@ -26,7 +26,7 @@ public class Cruzamento {
     public Integer cep;
     public Boolean sucesso;
 
-    public static final String TABLE_NAME ="Cruzamento";
+    public static final String TABLE_NAME = "cruzamento";
 
     public static final String SQL_CREATE_TABLE =
             "CREATE TABLE Cruzamento (" +
@@ -73,10 +73,10 @@ public class Cruzamento {
             valores.put("id", this.id);
         }
 
-        long idnovo = db.insertWithOnConflict("vacina", null, valores, SQLiteDatabase.CONFLICT_IGNORE);
+        long idnovo = db.insertWithOnConflict(TABLE_NAME, null, valores, SQLiteDatabase.CONFLICT_IGNORE);
 
         if (idnovo == -1) {
-            db.update("vacina", valores, "id=?", new String[] { Long.toString(this.id) });
+            db.update(TABLE_NAME, valores, "id=?", new String[] { Long.toString(this.id) });
         }else {
             this.id = idnovo;
         }
@@ -102,7 +102,7 @@ public class Cruzamento {
 
     public static Cruzamento carregar(SQLiteDatabase db, long id)
     {
-        Cursor resposta = db.query(Cruzamento.TABLE_NAME,   // Nome da tabela
+        Cursor resposta = db.query(TABLE_NAME,   // Nome da tabela
                 null,                                       // Colunas pra retornar (null=todas)
                 "id=?",                                     // Colunas de condição (apenas id)
                 new String[] {String.valueOf(id)},          // Valores de condição (id)
@@ -117,6 +117,7 @@ public class Cruzamento {
             return null;
         }
 
+        // Ler primeiro e único item
         resposta.moveToFirst();
         Cruzamento item = lerItem(db, resposta);
         resposta.close();
@@ -125,13 +126,13 @@ public class Cruzamento {
 
     public static void tudo(SQLiteDatabase db, List<Cruzamento> lista)
     {
-        Cursor resposta = db.query(Cruzamento.TABLE_NAME,   // Nome da tabela
-                null,                                       // Colunas pra retornar (null=todas)
-                null,                                       // Colunas de condição (não utilizado)
-                null,                                       // Valores de condição (não utilizado)
-                null,                                       // Colunas para Agrupar (não utilizado)
-                null,                                       // Condição de valor Agrupado (não utilizado)
-                null);                                      // Ordenação
+        Cursor resposta = db.query(TABLE_NAME,   // Nome da tabela
+                null,                            // Colunas pra retornar (null=todas)
+                null,                            // Colunas de condição (não utilizado)
+                null,                            // Valores de condição (não utilizado)
+                null,                            // Colunas para Agrupar (não utilizado)
+                null,                            // Condição de valor Agrupado (não utilizado)
+                null);                           // Ordenação
 
         // Ir para o começo da resposta (primeira linha)
         if (resposta.moveToFirst() == false) {

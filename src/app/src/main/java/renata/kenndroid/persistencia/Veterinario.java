@@ -42,7 +42,7 @@ public class Veterinario {
                 "fone1			TEXT		NULL," +
                 "fone2			TEXT		NULL," +
                 "email			TEXT		NULL" +
-                    ")";
+                ")";
 
 
     public static final String SQL_DROP_TABLE =
@@ -52,19 +52,19 @@ public class Veterinario {
     {
         this.id = 0;
     }
-    
-    public void save(SQLiteDatabase db)
+
+    public void salvar(SQLiteDatabase db)
     {
         // TODO: esse método vai salvar o registro no banco
     }
 
-    public static Veterinario load(SQLiteDatabase db, int id)
+    public static Veterinario carregar(SQLiteDatabase db, long id)
     {
         // TODO: esse método vai ler e retornar o registro do banco
         return null;
     }
 
-    public static void all(SQLiteDatabase db, List<Veterinario> lista)
+    public static void tudo(SQLiteDatabase db, List<Veterinario> lista)
     {
         // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
     }
