@@ -16,7 +16,7 @@ import java.util.List;
 import renata.kenndroid.KenndroidDb;
 import renata.kenndroid.R;
 import renata.kenndroid.adapters.AdapterVacina;
-import renata.kenndroid.cadastro.CadVacinas;
+import renata.kenndroid.cadastro.CadVacina;
 import renata.kenndroid.persistencia.Vacina;
 
 public class ListaVacina extends AppCompatActivity {
@@ -30,7 +30,7 @@ public class ListaVacina extends AppCompatActivity {
 
     private View.OnClickListener AddListener = new View.OnClickListener() {
         public void onClick(View v) {
-            Intent intent = new Intent(ListaVacina.this, CadVacinas.class);
+            Intent intent = new Intent(ListaVacina.this, CadVacina.class);
             intent.putExtra("comando", "criar");
             startActivityForResult(intent, RES_CADASTRO);
         }
@@ -39,7 +39,7 @@ public class ListaVacina extends AppCompatActivity {
     private AdapterView.OnItemClickListener ItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent intent = new Intent(ListaVacina.this, CadVacinas.class);
+            Intent intent = new Intent(ListaVacina.this, CadVacina.class);
             intent.putExtra("comando", "editar");
             intent.putExtra("id", id);
             startActivityForResult(intent, RES_EDICAO);

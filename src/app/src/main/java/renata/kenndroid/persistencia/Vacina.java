@@ -72,7 +72,7 @@ public class Vacina {
 
     public static void deletar(SQLiteDatabase db, long id)
     {
-        db.delete(Vacina.TABLE_NAME,                // Nome da tabela
+        db.delete(TABLE_NAME,                       // Nome da tabela
             "id=?",                                 // Condições do WHERE para apagar (apenas id)
             new String[] { String.valueOf(id) });   // Valor das condições acima (apenas id)
     }

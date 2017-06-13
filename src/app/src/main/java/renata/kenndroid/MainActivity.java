@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import renata.kenndroid.cadastro.CadAnimal;
 import renata.kenndroid.cadastro.CadAnimalEvento;
 import renata.kenndroid.cadastro.CadCanil;
-import renata.kenndroid.cadastro.CadClientes;
+import renata.kenndroid.cadastro.CadCliente;
 import renata.kenndroid.cadastro.CadClinicas;
 import renata.kenndroid.cadastro.CadCruzamento;
 import renata.kenndroid.cadastro.CadVendas;
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             break;
 
             case R.id.action_clientes:
-                intent = new Intent(this, CadClientes.class);
+                intent = new Intent(this, CadCliente.class);
                 break;
 
             case R.id.action_eventos:

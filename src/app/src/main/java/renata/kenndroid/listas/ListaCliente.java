@@ -16,7 +16,7 @@ import java.util.List;
 import renata.kenndroid.KenndroidDb;
 import renata.kenndroid.R;
 import renata.kenndroid.adapters.AdapterCliente;
-import renata.kenndroid.cadastro.CadClientes;
+import renata.kenndroid.cadastro.CadCliente;
 import renata.kenndroid.persistencia.Cliente;
 
 public class ListaCliente extends AppCompatActivity {
@@ -29,7 +29,7 @@ public class ListaCliente extends AppCompatActivity {
 
     private View.OnClickListener AddListener = new View.OnClickListener() {
         public void onClick(View v) {
-            Intent intent = new Intent(ListaCliente.this, CadClientes.class);
+            Intent intent = new Intent(ListaCliente.this, CadCliente.class);
             intent.putExtra("comando", "criar");
             startActivityForResult(intent, RES_CADASTRO);
         }
@@ -38,7 +38,7 @@ public class ListaCliente extends AppCompatActivity {
     private AdapterView.OnItemClickListener ItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent intent = new Intent(ListaCliente.this, CadClientes.class);
+            Intent intent = new Intent(ListaCliente.this, CadCliente.class);
             intent.putExtra("comando", "editar");
             intent.putExtra("id", id);
             startActivityForResult(intent, RES_EDICAO);

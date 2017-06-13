@@ -20,10 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".cadastro.CadCanil" />
-        <activity android:name=".cadastro.CadVacinas" />
+        <activity android:name=".cadastro.CadVacina" />
         <activity android:name=".cadastro.CadVendas" />
         <activity android:name=".cadastro.CadVet" />
-        <activity android:name=".cadastro.CadClientes" />
+        <activity android:name=".cadastro.CadCliente" />
         <activity android:name=".cadastro.CadAnimal" />
         <activity android:name=".cadastro.CadClinicas" />
         <activity android:name=".cadastro.CadVacinacao" />

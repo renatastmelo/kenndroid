@@ -14,9 +14,9 @@ import renata.kenndroid.KenndroidDb;
 import renata.kenndroid.R;
 import renata.kenndroid.persistencia.Vacina;
 
-public class CadVacinas extends AppCompatActivity {
+public class CadVacina extends AppCompatActivity {
 
-    public Long idEditando = null;
+    private Long idEditando = null;
 
     private View.OnClickListener SalvarListener = new View.OnClickListener() {
         public void onClick(View v) {
