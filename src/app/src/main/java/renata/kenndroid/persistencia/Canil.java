@@ -97,7 +97,6 @@ public class Canil {
     public static void all(SQLiteDatabase db, List<Canil> canis)
     {
         // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
-        return null;
     }
 
     //TODO: conferir no requisito quais as pesqueisas especificadas

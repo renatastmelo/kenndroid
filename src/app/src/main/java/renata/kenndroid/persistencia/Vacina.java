@@ -100,7 +100,7 @@ public class Vacina {
         return vac;
     }
 
-    public static List<Vacina> all(SQLiteDatabase db, List<Vacina> vacinas)
+    public static void all(SQLiteDatabase db, List<Vacina> vacinas)
     {
         Cursor resposta = db.query(Vacina.TABLE_NAME,   // Nome da tabela
             null,                                       // Colunas pra retornar (null=todas)
@@ -115,7 +115,7 @@ public class Vacina {
             // Se não tiver primeiro item (nao tem nenhum item)
             // Retornar a lista vazia
             resposta.close();
-            return vacinas;
+            return;
         }
 
         // Ler linha por linha
@@ -126,7 +126,6 @@ public class Vacina {
             resposta.moveToNext();
         }
         resposta.close();
-        return vacinas;
     }
 
     //TODO: conferir no requisito quais as pesqueisas especificadas
