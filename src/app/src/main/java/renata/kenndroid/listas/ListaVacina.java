@@ -1,4 +1,4 @@
-package renata.kenndroid;
+package renata.kenndroid.listas;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,6 +13,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import renata.kenndroid.KenndroidDb;
+import renata.kenndroid.R;
 import renata.kenndroid.adapters.AdapterVacina;
 import renata.kenndroid.cadastro.CadVacinas;
 import renata.kenndroid.persistencia.Vacina;

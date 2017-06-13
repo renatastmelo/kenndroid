@@ -16,6 +16,7 @@ import renata.kenndroid.cadastro.CadClinicas;
 import renata.kenndroid.cadastro.CadCruzamento;
 import renata.kenndroid.cadastro.CadVendas;
 import renata.kenndroid.cadastro.CadVet;
+import renata.kenndroid.listas.ListaVacina;
 
 public class MainActivity extends AppCompatActivity {
 
