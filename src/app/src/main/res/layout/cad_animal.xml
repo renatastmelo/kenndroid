@@ -34,7 +34,7 @@
 
     </LinearLayout>
 
-    <!-- Dados cadastrais dos animais -->
+    <!-- Dados cadastrais dos itens -->
     <EditText
         android:id="@+id/edt_nome"
         android:layout_width="match_parent"

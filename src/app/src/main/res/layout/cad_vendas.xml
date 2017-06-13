@@ -33,7 +33,7 @@
             android:textSize="20dp" />
     </LinearLayout>
 
-        <!-- nome dos animais em dropbox-->
+        <!-- nome dos itens em dropbox-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-        <!-- nome dos clientes em dropbox-->
+        <!-- nome dos itens em dropbox-->
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:orientation="horizontal"
@@ -83,7 +83,7 @@
                 android:spinnerMode="dropdown"
                 android:textSize="20dp" />
         </LinearLayout>
-        <!-- nome dos animais em dropbox-->
+        <!-- nome dos itens em dropbox-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

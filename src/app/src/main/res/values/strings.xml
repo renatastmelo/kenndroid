@@ -45,7 +45,7 @@
     <string name="titulo_cadAcasala">Cadastro de Cruzamentos</string>
 
     <!--tela de cadastro de Animal Evento-->
-    <string name="titulo_cadAniEvento">Cadastro de Animais em eventos</string>
+    <string name="titulo_cadAniEvento">Cadastro de Animais em itens</string>
 
     <!--campos de cadastros-->
     <string name="edt_nome">Nome</string>

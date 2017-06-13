@@ -18,19 +18,19 @@ import renata.kenndroid.persistencia.Vacina;
 
 public class AdapterVacina extends BaseAdapter {
 
-    // Lista de vacinas para usar
-    private final List<Vacina> vacinas;
+    // Lista de itens para usar
+    private final List<Vacina> itens;
 
     // Activity (janela) que vai usar a lista
     private final Activity activity;
 
     /**
      * Constructor do adapter.
-     * @param vacinas Lista de vacinas que será usada
+     * @param itens Lista de itens que será usada
      * @param act Activity que usará o adapter.
      */
-    public AdapterVacina(List<Vacina> vacinas, Activity act) {
-        this.vacinas = vacinas;
+    public AdapterVacina(List<Vacina> itens, Activity act) {
+        this.itens = itens;
         this.activity = act;
     }
 
@@ -40,8 +40,8 @@ public class AdapterVacina extends BaseAdapter {
      */
     @Override
     public int getCount() {
-        // retornar o tamanho da lista de vacinas
-        return vacinas.size();
+        // retornar o tamanho da lista de itens
+        return itens.size();
     }
 
     /**
@@ -52,7 +52,7 @@ public class AdapterVacina extends BaseAdapter {
     @Override
     public Object getItem(int position) {
         // usa a função get da lista pra pegar o item na posição.
-        return vacinas.get(position);
+        return itens.get(position);
     }
 
     /**
@@ -63,12 +63,12 @@ public class AdapterVacina extends BaseAdapter {
     @Override
     public long getItemId(int position) {
         // retorna o id da vacina na posição
-        return vacinas.get(position).id;
+        return itens.get(position).id;
     }
 
     /**
      * Essa função cria uma View para colocar na lista.
-     * @param position posição do item para criar a view. e somo chama la no xml ? ou e direto n
+     * @param position posição do item para criar a view.
      * @param convertView
      * @param parent O layout ao qual será adicionado o item da lista.
      * @return View do item para mostrar na tela.
@@ -78,7 +78,7 @@ public class AdapterVacina extends BaseAdapter {
         // inflar o layout do "item da lista"
         View view = this.activity.getLayoutInflater().inflate(R.layout.item_vacina, parent, false);
         // Pegar a vacina para colocar nesse item da lista.
-        Vacina vacina = this.vacinas.get(position);
+        Vacina vacina = this.itens.get(position);
 
         // Agora encontrar os campos do layout item_vacina
         TextView nome = (TextView) view.findViewById(R.id.txt_nome);

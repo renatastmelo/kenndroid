@@ -104,7 +104,7 @@ public class ListaVeterinario extends AppCompatActivity {
         lista.setOnItemClickListener(ItemClickListener);
 
         // Criar o adapter com a lista de Veterinarios definida na classe, usando essa própria activity.
-        AdapterVeterinario adapter = new AdapterVeterinario(this.Veterinarios, this);
+        AdapterVeterinario adapter = new AdapterVeterinario(this.veterinarios, this);
 
         // Setar o adapter da ListView da tela
         lista.setAdapter(adapter);

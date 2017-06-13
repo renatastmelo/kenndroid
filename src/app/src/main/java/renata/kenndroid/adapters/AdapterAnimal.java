@@ -18,19 +18,19 @@ import renata.kenndroid.persistencia.Animal;
 
 public class AdapterAnimal extends BaseAdapter {
 
-    // Lista de animais para usar
-    private final List<Animal> animais;
+    // Lista de itens para usar
+    private final List<Animal> itens;
 
     // Activity (janela) que vai usar a lista
     private final Activity activity;
 
     /**
      * Constructor do adapter.
-     * @param animais Lista de Animals que será usada
+     * @param itens Lista de Animals que será usada
      * @param act Activity que usará o adapter.
      */
-    public AdapterAnimal(List<Animal> animais, Activity act) {
-        this.animais = animais;
+    public AdapterAnimal(List<Animal> itens, Activity act) {
+        this.itens = itens;
         this.activity = act;
     }
 
@@ -41,7 +41,7 @@ public class AdapterAnimal extends BaseAdapter {
     @Override
     public int getCount() {
         // retornar o tamanho da lista de Animals
-        return animais.size();
+        return itens.size();
     }
 
     /**
@@ -52,7 +52,7 @@ public class AdapterAnimal extends BaseAdapter {
     @Override
     public Object getItem(int position) {
         // usa a função get da lista pra pegar o item na posição.
-        return animais.get(position);
+        return itens.get(position);
     }
 
     /**
@@ -63,12 +63,12 @@ public class AdapterAnimal extends BaseAdapter {
     @Override
     public long getItemId(int position) {
         // retorna o id da Animal na posição
-        return animais.get(position).id;
+        return itens.get(position).id;
     }
 
     /**
      * Essa função cria uma View para colocar na lista.
-     * @param position posição do item para criar a view. e somo chama la no xml ? ou e direto n
+     * @param position posição do item para criar a view.
      * @param convertView
      * @param parent O layout ao qual será adicionado o item da lista.
      * @return View do item para mostrar na tela.
@@ -78,7 +78,7 @@ public class AdapterAnimal extends BaseAdapter {
         // inflar o layout do "item da lista"
         View view = this.activity.getLayoutInflater().inflate(R.layout.item_animal, parent, false);
         // Pegar a Animal para colocar nesse item da lista.
-        Animal animal = this.animais.get(position);
+        Animal animal = this.itens.get(position);
 
         // Agora encontrar os campos do layout item_Animal
         TextView nome = (TextView) view.findViewById(R.id.txt_nome);
@@ -86,7 +86,7 @@ public class AdapterAnimal extends BaseAdapter {
 
         // Preencher os campos do layout com a informação da Animal
         nome.setText(animal.nome);
-        descricao.setText(animal.data_nasc);
+        dataNasc.setText(animal.data_nasc);
         return view;
     }
 }
