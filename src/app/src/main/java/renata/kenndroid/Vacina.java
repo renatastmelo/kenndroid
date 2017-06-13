@@ -1,5 +1,6 @@
 package renata.kenndroid;
 
+import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  */
 
 public class Vacina {
-    public int id;
+    public long id;
     public String nome;
     public String descricao;
 
@@ -20,7 +21,7 @@ public class Vacina {
             "CREATE TABLE Vacina (" +
             "id				INTEGER		PRIMARY KEY		AUTOINCREMENT," +
             "nome			TEXT		NOT NULL," +
-            "descricao		TEXT		NULL," +
+            "descricao		TEXT		NULL" +
                     ")";
 
 
@@ -28,10 +29,34 @@ public class Vacina {
             "DROP TABLE IF EXISTS Vacina";
 
 
+    // Construtor
+    public Vacina()
+    {
+        // Setando id=0 inicialmente, para caso o usuário não sete o id.
+        this.id = 0;
+    }
+
     public void save(SQLiteDatabase db)
     {
-        // TODO: esse método vai salvar o registro no banco
+        ContentValues valores = new ContentValues();
+
+        if (this.nome != null) valores.put("nome", this.nome);
+        if (this.descricao != null) valores.put("descricao", this.descricao);
+
+
+        if (this.id != 0) {
+            valores.put("id", this.id);
+        }
+
+        long idnovo = db.insertWithOnConflict("vacina", null, valores, SQLiteDatabase.CONFLICT_IGNORE);
+
+        if (idnovo == -1) {
+            db.update("vacina", valores, "id=?", new String[] { Long.toString(this.id) });
+        }else {
+            this.id = idnovo;
+        }
     }
+
 
     public static Vacina load(SQLiteDatabase db, int id)
     {

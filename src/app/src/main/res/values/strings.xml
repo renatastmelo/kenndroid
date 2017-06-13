@@ -49,7 +49,7 @@
 
     <!--campos de cadastros-->
     <string name="edt_nome">Nome</string>
-    <string name="edt_cidade">Cidadde</string>
+    <string name="edt_cidade">Cidade</string>
     <string name="edt_estado">Estado</string>
     <string name="edt_end">Endereço</string>
     <string name="edt_compl">Complemento</string>
@@ -69,13 +69,24 @@
 
     <!--campos de cadastros extras de venda-->
     <string name="edt_dt">Data da venda</string>
-    <string name="edt_valor">R$ </string>
-    <string name="edt_valor_recebido">Valor recebido</string>
-    <string name="edt_entrega_pedigree">Data de entrega do pedigree</string>
+    <string name="edt_valor">Valor Total: </string>
+    <string name="edt_valor_recebido">Valor recebido:</string>
+    <string name="edt_entrega_pedigree">Entrega pedigree: </string>
     <string name="edt_dt_ult_pgto">Data do último pagamento</string>
     <string name="edt_nota_fiscal">Nota Fiscal</string>
-    <string name="edt_forma_pgto">forma de pagamento</string>
+    <string name="edt_forma_pgto">forma de pgto</string>
     <string name="edt_obs">Observações</string>
+
+    <!--campos de formas de vendas do cadastro de venda-->
+    <string-array name="formas_pgto">
+        <item>Espécie</item>
+        <item>Débito</item>
+        <item>Crédito</item>
+        <item>Cheque</item>
+        <item>Transferência</item>
+        <item>Misto</item>
+    </string-array>
+
 
     <!--campos de cadastros extras de Cadastro de vetenários-->
     <string name="edt_especialidade">Especialidade veterinária</string>
@@ -107,7 +118,7 @@
     <string name="edt_lote">Lote da vacina</string>
     <string name="edt_reac_adv">Reações adversas</string>
     <string name="edt_nomeAnimal">Animal: </string>
-    <string name="edt_nomeVet">Médico: </string>
+    <string name="edt_nomeVet">Veterinário(a): </string>
     <string name="edt_data">Data Vacinação: </string>
     <string name="edt_val">Validade Vacina: </string>
     <string name="edt_valor_Vac">Valor: </string>

@@ -40,7 +40,7 @@ public class Evento {
                     "fone			TEXT		NULL," +
                     "email			TEXT		NULL," +
                     "organizacao	TEXT		NULL," +
-                    "data 			TEXT		NULL," +
+                    "data 			TEXT		NULL" +
                         ")";
 
 

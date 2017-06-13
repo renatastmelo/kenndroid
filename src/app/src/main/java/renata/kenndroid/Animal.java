@@ -34,7 +34,7 @@ public class Animal {
             "canil			INTEGER		NOT NULL,"+
             "comprador		INTEGER		NULL,"+
             "data_venda		TEXT		NULL,"+
-            "foto			BLOB		NULL,"+
+            "foto			BLOB		NULL"+
         ")";
 
     public static final String SQL_DROP_TABLE =

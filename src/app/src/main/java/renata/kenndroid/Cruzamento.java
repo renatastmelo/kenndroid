@@ -38,7 +38,7 @@ public class Cruzamento {
                 "complemento	TEXT		NULL," +
                 "ponto_ref		TEXT		NULL," +
                 "cep			INTEGER		NULL," +
-                "sucesso		INTEGER		NULL," +
+                "sucesso		INTEGER		NULL" +
                     ")";
 
 

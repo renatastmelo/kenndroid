@@ -33,100 +33,227 @@
             android:textSize="20dp" />
     </LinearLayout>
 
+        <!-- nome dos animais em dropbox-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_drop_animal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/edt_nome_animal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/dropAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:spinnerMode="dropdown"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- nome dos clientes em dropbox-->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/text_drop_femea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/edt_nome_cliente"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/dropClientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:spinnerMode="dropdown"
+                android:textSize="20dp" />
+        </LinearLayout>
+        <!-- nome dos animais em dropbox-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_forma_pgto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/edt_forma_pgto"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/dropFPgto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:dropDownWidth="match_parent"
+                android:entries="@string/edt_forma_pgto"
+                android:spinnerMode="dropdown"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- checkBox da nota fiscal-->
+        <CheckBox
+            android:id="@+id/edt_nota_fiscal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@array/formas_pgto" />
+
+        <!-- Data da venda-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_dt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/edt_dt"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/edt_dt_venda"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="  dd/mm/ano"
+                android:ems="10"
+                android:inputType="date" />
+        </LinearLayout>
+
+        <!-- Data da entrega do pedidree-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_dt_pedigree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/edt_entrega_pedigree"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/dt_pedigree"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="  dd/mm/ano"
+                android:ems="10"
+                android:inputType="date" />
+        </LinearLayout>
+
+        <!-- Valor Total -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_valor_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/edt_valor"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/valor_total"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="R$"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Valor recebido -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_valor_recebido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/edt_valor_recebido"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/valor_recebido"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="R$"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Data do ultimo pagamento-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_dt_ult_pgto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/edt_entrega_pedigree"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/dt_ult_pgto"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="  dd/mm/ano"
+                android:ems="10"
+                android:inputType="date" />
+        </LinearLayout>
+
     <EditText
-        android:id="@+id/edt_nome"
+        android:id="@+id/edt_obs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/edt_nome_animal" />
-
-    <EditText
-        android:id="@+id/edt_nome_cliente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/edt_nome_cliente" />
-
-    <EditText
-        android:id="@+id/edt_dt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/edt_dt" />
-
-    <EditText
-        android:id="@+id/edt_entrega_pedigree"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/edt_entrega_pedigree" />
-
-    <EditText
-        android:id="@+id/edt_forma_pgto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/edt_forma_pgto" />
-
-    <CheckBox
-        android:id="@+id/edt_nota_fiscal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/edt_nota_fiscal" />
-
-    <EditText
-        android:id="@+id/edt_valor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="@string/edt_valor" />
-
-    <EditText
-        android:id="@+id/edt_valor_recebido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="@string/edt_valor_recebido" />
-
-    <EditText
-        android:id="@+id/edt_dt_ult_pgto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/edt_dt_ult_pgto" />
-
-
-    <EditText
-        android:id="@+id/edt_fone1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/edt_fone1" />
-
-    <EditText
-        android:id="@+id/edt_fone2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/edt_fone2" />
-
-    <EditText
-        android:id="@+id/edt_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textWebEmailAddress"
-        android:hint="@string/edt_email" />
+        android:inputType="textMultiLine"
+        android:hint="@string/edt_obs" />
 
     <Button
         android:id="@+id/button"

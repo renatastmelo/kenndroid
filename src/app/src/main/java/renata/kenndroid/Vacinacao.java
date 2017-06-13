@@ -1,5 +1,6 @@
 package renata.kenndroid;
 
+import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  */
 
 public class Vacinacao {
-    public int id;
+    public long id;
     public int id_Animal;
     public int id_Vacina;
     public int id_Veterinario;
@@ -20,13 +21,13 @@ public class Vacinacao {
     public String validade;
     public String lote;
     public String reacoes_adversas;
-    public int valor;
+    public Integer valor;
     public String observacoes;
 
     public static final String TABLE_NAME ="Vacinacao";
 
     public static final String SQL_CREATE_TABLE =
-            "CREATE TABLE Vacinacao" +
+            "CREATE TABLE Vacinacao (" +
                     "id					INTEGER		PRIMARY KEY		AUTOINCREMENT," +
                     "id_Animal			INTEGER		NOT NULL," +
                     "id_Veterinario		INTEGER		NOT NULL," +
@@ -37,17 +38,38 @@ public class Vacinacao {
                     "lote				TEXT		NULL," +
                     "reacoes_adversas	TEXT		NULL," +
                     "valor 				INTEGER		NOT NULL," +
-                    "observacoes		TEXT		NULL," +
+                    "observacoes		TEXT		NULL" +
                     ")";
 
 
     public static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS Clinica";
 
-
+    // TODO: fazer as listagem de telas para obter ids do itens selecionado pelo usuário
     public void save(SQLiteDatabase db)
     {
-        // TODO: esse método vai salvar o registro no banco
+        ContentValues valores = new ContentValues();
+
+
+        if (this.data != null)valores.put("data", this.data);
+        if (this.marca != null)valores.put("marca", this.marca);
+        if (this.validade != null)valores.put("validade", this.validade);
+        if (this.lote != null) valores.put("lote", this.lote);
+        if (this.reacoes_adversas != null) valores.put("reacoes_adversas", this.reacoes_adversas);
+        if (this.valor != null) valores.put("valor", this.valor);
+        if (this.observacoes != null) valores.put("observacoes", this.observacoes);
+
+        if (this.id != 0) {
+            valores.put("id", this.id);
+        }
+
+        long id = db.insertWithOnConflict("vacinacao", null, valores, SQLiteDatabase.CONFLICT_IGNORE);
+
+        if (id == -1) {
+            db.update("vacinacao", valores, "id=?", new String[] { Long.toString(this.id) });
+        }else {
+            this.id = id;
+        }
     }
 
     public static Vacinacao load(SQLiteDatabase db, int id)

@@ -40,7 +40,7 @@ public class Clinica {
             "cep			INTEGER		NULL," +
             "fone1			TEXT		NULL," +
             "fone2			TEXT		NULL," +
-            "email			TEXT		NULL," +
+            "email			TEXT		NULL" +
                     ")";
 
 

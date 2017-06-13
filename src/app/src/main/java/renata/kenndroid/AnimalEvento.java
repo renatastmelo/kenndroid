@@ -30,7 +30,7 @@ public class AnimalEvento {
                 "pontos			TEXT		NULL," +
                 "juizes			TEXT		NULL," +
                 "penalizacao	INTEGER		NULL," +
-                "percursos		INTEGER		NULL," +
+                "percursos		INTEGER		NULL" +
                     ")";
 
 

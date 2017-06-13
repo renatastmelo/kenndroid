@@ -97,22 +97,7 @@
         android:baselineAligned="false">
 
 
-        <TextView
-            android:id="@+id/text_drop_vet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="10sp"
-            android:text="@string/edt_nomeVet"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-        <Spinner
-            android:id="@+id/drop_veterinarios"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:spinnerMode="dropdown"
-            android:textSize="20sp" />
     </LinearLayout>
 
     <!-- nome da Clínica em dropbox-->
@@ -234,7 +219,7 @@
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:layout_gravity="center_vertical"
-            android:hint="@string/edt_nomeVet"
+            android:text="@string/edt_nomeVet"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <Spinner
@@ -266,13 +251,12 @@
 
         <EditText
             android:id="@+id/pgtoVac"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="numberSigned" />
 
     </LinearLayout>
-
 
     <EditText
         android:id="@+id/vacinacao_obs"
