@@ -47,7 +47,7 @@ public class ListaVacina extends AppCompatActivity {
     };
 
 
-    public void carregarVacinas()
+    public void carregar()
     {
         this.vacinas.clear();
         SQLiteDatabase db = KenndroidDb.getInstance(this).getWritableDatabase();
@@ -71,14 +71,18 @@ public class ListaVacina extends AppCompatActivity {
             case RES_CADASTRO: // Tratar Retorno do Cadastro de Vacina
             case RES_EDICAO:   // Tratar Retorno da Edição de Vacina igual ao cadastro
                 if (resultCode == Activity.RESULT_OK) {
-                    carregarVacinas();
-                    ListView listaDeVacinas = (ListView) findViewById(R.id.lista);
-                    listaDeVacinas.invalidateViews();
+                    carregar();
+                    ListView lista = (ListView) findViewById(R.id.lista);
+                    lista.invalidateViews();
                 }
                 break;
         }
     }
 
+    /**
+     * Executado quando a janela de listagem é criada.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,18 +96,18 @@ public class ListaVacina extends AppCompatActivity {
         btnAdd.setOnClickListener(AddListener);
 
         // Carregar a lista de vacinas usando o método loadAll da classe de persistência.
-        carregarVacinas();
+        carregar();
 
         // Encontrar o controle ListView da tela.
-        ListView listaDeVacinas = (ListView) findViewById(R.id.lista);
+        ListView lista = (ListView) findViewById(R.id.lista);
 
         // Setar o ItemClickListener da lista para receber os clicks em itens.
-        listaDeVacinas.setOnItemClickListener(ItemClickListener);
+        lista.setOnItemClickListener(ItemClickListener);
 
         // Criar o adapter com a lista de vacinas definida na classe, usando essa própria activity.
         AdapterVacina adapter = new AdapterVacina(this.vacinas, this);
 
         // Setar o adapter da ListView da tela
-        listaDeVacinas.setAdapter(adapter);
+        lista.setAdapter(adapter);
     }
 }
