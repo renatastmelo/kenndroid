@@ -49,7 +49,7 @@ public class ListaAnimal extends AppCompatActivity {
     {
         this.animais.clear();
         SQLiteDatabase db = KenndroidDb.getInstance(this).getWritableDatabase();
-        Animal.all(db, this.animais);
+        Animal.tudo(db, this.animais);
         db.close();
     }
 
@@ -93,7 +93,7 @@ public class ListaAnimal extends AppCompatActivity {
         FloatingActionButton btnAdd = (FloatingActionButton) findViewById(R.id.btn_add);
         btnAdd.setOnClickListener(AddListener);
 
-        // Carregar a lista de Animais usando o método all da classe de persistência.
+        // Carregar a lista de Animais usando o método tudo da classe de persistência.
         carregar();
 
         // Encontrar o controle ListView da tela.

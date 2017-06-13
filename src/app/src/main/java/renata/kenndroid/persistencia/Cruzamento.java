@@ -1,6 +1,7 @@
 package renata.kenndroid.persistencia;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class Cruzamento {
         this.id = 0;
     }
 
-    public void save(SQLiteDatabase db)
+    public void salvar(SQLiteDatabase db)
     {
         ContentValues valores = new ContentValues();
 
@@ -81,15 +82,73 @@ public class Cruzamento {
         }
     }
 
-    public static Cruzamento load(SQLiteDatabase db, int id)
+    public static Cruzamento lerItem(SQLiteDatabase db, Cursor resp)
     {
-        // TODO: esse método vai ler e retornar o registro do banco
-        return null;
+        Cruzamento item = new Cruzamento();
+        item.id = resp.getLong(resp.getColumnIndex("id"));
+        item.macho = Animal.carregar(db, resp.getLong(resp.getColumnIndex("macho")));
+        item.femea = Animal.carregar(db, resp.getLong(resp.getColumnIndex("femea")));
+        item.data = resp.getString(resp.getColumnIndex("data"));
+        item.nome_local = resp.getString(resp.getColumnIndex("nome_local"));
+        item.cidade = resp.getString(resp.getColumnIndex("cidade"));
+        item.estado = resp.getString(resp.getColumnIndex("estado"));
+        item.endereco = resp.getString(resp.getColumnIndex("endereco"));
+        item.complemento = resp.getString(resp.getColumnIndex("complemento"));
+        item.ponto_ref = resp.getString(resp.getColumnIndex("ponto_ref"));
+        item.cep = resp.getInt(resp.getColumnIndex("cep"));
+        item.sucesso = (resp.getInt(resp.getColumnIndex("sucesso")) == 1);
+        return item;
     }
 
-    public static void all(SQLiteDatabase db, List<Cruzamento> lista)
+    public static Cruzamento carregar(SQLiteDatabase db, long id)
     {
-        // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
+        Cursor resposta = db.query(Cruzamento.TABLE_NAME,   // Nome da tabela
+                null,                                       // Colunas pra retornar (null=todas)
+                "id=?",                                     // Colunas de condição (apenas id)
+                new String[] {String.valueOf(id)},          // Valores de condição (id)
+                null,                                       // Colunas para Agrupar (não utilizado)
+                null,                                       // Condição de valor Agrupado (não utilizado)
+                null);
+
+        // Se não obtive resposta retorne null
+        if (resposta.getCount() <= 0)
+        {
+            resposta.close();
+            return null;
+        }
+
+        resposta.moveToFirst();
+        Cruzamento item = lerItem(db, resposta);
+        resposta.close();
+        return item;
+    }
+
+    public static void tudo(SQLiteDatabase db, List<Cruzamento> lista)
+    {
+        Cursor resposta = db.query(Cruzamento.TABLE_NAME,   // Nome da tabela
+                null,                                       // Colunas pra retornar (null=todas)
+                null,                                       // Colunas de condição (não utilizado)
+                null,                                       // Valores de condição (não utilizado)
+                null,                                       // Colunas para Agrupar (não utilizado)
+                null,                                       // Condição de valor Agrupado (não utilizado)
+                null);                                      // Ordenação
+
+        // Ir para o começo da resposta (primeira linha)
+        if (resposta.moveToFirst() == false) {
+            // Se não tiver primeiro item (nao tem nenhum item)
+            // Retornar a lista vazia
+            resposta.close();
+            return;
+        }
+
+        // Ler linha por linha
+        while (!resposta.isAfterLast())
+        {
+            Cruzamento item = lerItem(db, resposta);
+            lista.add(item);
+            resposta.moveToNext();
+        }
+        resposta.close();
     }
 
     //TODO: conferir no requisito quais as pesqueisas especificadas

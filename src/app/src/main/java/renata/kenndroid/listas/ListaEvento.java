@@ -93,7 +93,7 @@ public class ListaEvento extends AppCompatActivity {
         FloatingActionButton btnAdd = (FloatingActionButton) findViewById(R.id.btn_add);
         btnAdd.setOnClickListener(AddListener);
 
-        // Carregar a lista de Eventos usando o método all da classe de persistência.
+        // Carregar a lista de Eventos usando o método tudo da classe de persistência.
         carregar();
 
         // Encontrar o controle ListView da tela.

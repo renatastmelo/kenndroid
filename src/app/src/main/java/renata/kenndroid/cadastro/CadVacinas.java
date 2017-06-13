@@ -26,7 +26,7 @@ public class CadVacinas extends AppCompatActivity {
 
             KenndroidDb openHelper = KenndroidDb.getInstance(getApplicationContext());
             SQLiteDatabase db = openHelper.getWritableDatabase();
-            vacina.save(db);
+            vacina.salvar(db);
             db.close();
             Toast.makeText(getApplicationContext(), "Salvo.", Toast.LENGTH_LONG).show();
             setResult(Activity.RESULT_OK);
@@ -39,7 +39,7 @@ public class CadVacinas extends AppCompatActivity {
 
             KenndroidDb openHelper = KenndroidDb.getInstance(getApplicationContext());
             SQLiteDatabase db = openHelper.getWritableDatabase();
-            Vacina.del(db, idEditando);
+            Vacina.deletar(db, idEditando);
             db.close();
             setResult(Activity.RESULT_OK);
             finish();
@@ -63,7 +63,7 @@ public class CadVacinas extends AppCompatActivity {
             this.idEditando = intent.getLongExtra("id", 0);
             if (this.idEditando != 0) {
                 SQLiteDatabase db = KenndroidDb.getInstance(this).getReadableDatabase();
-                Vacina vac = Vacina.load(db, this.idEditando);
+                Vacina vac = Vacina.carregar(db, this.idEditando);
                 db.close();
                 colocarDadosDaPersistenciaNaTela(vac);
             }

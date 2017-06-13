@@ -51,7 +51,7 @@ public class ListaVacina extends AppCompatActivity {
     {
         this.vacinas.clear();
         SQLiteDatabase db = KenndroidDb.getInstance(this).getWritableDatabase();
-        Vacina.all(db, this.vacinas);
+        Vacina.tudo(db, this.vacinas);
         db.close();
     }
 

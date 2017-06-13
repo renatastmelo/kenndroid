@@ -49,7 +49,7 @@ public class ListaVenda extends AppCompatActivity {
     {
         this.vendas.clear();
         SQLiteDatabase db = KenndroidDb.getInstance(this).getWritableDatabase();
-        Venda.all(db, this.vendas);
+        Venda.tudo(db, this.vendas);
         db.close();
     }
 
@@ -93,7 +93,7 @@ public class ListaVenda extends AppCompatActivity {
         FloatingActionButton btnAdd = (FloatingActionButton) findViewById(R.id.btn_add);
         btnAdd.setOnClickListener(AddListener);
 
-        // Carregar a lista de Vendas usando o método all da classe de persistência.
+        // Carregar a lista de Vendas usando o método tudo da classe de persistência.
         carregar();
 
         // Encontrar o controle ListView da tela.

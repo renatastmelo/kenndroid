@@ -52,7 +52,7 @@ public class Vacinacao {
     }
 
     // TODO: fazer as listagem de telas para obter ids do itens selecionado pelo usuário
-    public void save(SQLiteDatabase db)
+    public void salvar(SQLiteDatabase db)
     {
         ContentValues valores = new ContentValues();
 
@@ -78,13 +78,13 @@ public class Vacinacao {
         }
     }
 
-    public static Vacinacao load(SQLiteDatabase db, int id)
+    public static Vacinacao carregar(SQLiteDatabase db, int id)
     {
         // TODO: esse método vai ler e retornar o registro do banco
         return null;
     }
 
-    public static void all(SQLiteDatabase db, List<Vacinacao> lista)
+    public static void tudo(SQLiteDatabase db, List<Vacinacao> lista)
     {
         // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
     }

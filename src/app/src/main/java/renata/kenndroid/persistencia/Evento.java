@@ -54,12 +54,12 @@ public class Evento {
         this.id = 0;
     }
 
-    public void save(SQLiteDatabase db)
+    public void salvar(SQLiteDatabase db)
     {
         // TODO: esse método vai salvar o registro no banco
     }
 
-    public static Evento load(SQLiteDatabase db, int id)
+    public static Evento carregar(SQLiteDatabase db, long id)
     {
         // TODO: esse método vai ler e retornar o registro do banco
         return null;

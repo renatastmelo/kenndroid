@@ -49,7 +49,7 @@ public class ListaClinica extends AppCompatActivity {
     {
         this.clinicas.clear();
         SQLiteDatabase db = KenndroidDb.getInstance(this).getWritableDatabase();
-        Clinica.all(db, this.clinicas);
+        Clinica.tudo(db, this.clinicas);
         db.close();
     }
 
@@ -93,7 +93,7 @@ public class ListaClinica extends AppCompatActivity {
         FloatingActionButton btnAdd = (FloatingActionButton) findViewById(R.id.btn_add);
         btnAdd.setOnClickListener(AddListener);
 
-        // Carregar a lista de Clinicas usando o método all da classe de persistência.
+        // Carregar a lista de Clinicas usando o método tudo da classe de persistência.
         carregar();
 
         // Encontrar o controle ListView da tela.

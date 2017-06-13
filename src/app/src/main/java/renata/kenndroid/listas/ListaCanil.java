@@ -49,7 +49,7 @@ public class ListaCanil extends AppCompatActivity {
     {
         this.canis.clear();
         SQLiteDatabase db = KenndroidDb.getInstance(this).getWritableDatabase();
-        Canil.all(db, this.canis);
+        Canil.tudo(db, this.canis);
         db.close();
     }
 

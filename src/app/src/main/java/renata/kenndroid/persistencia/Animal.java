@@ -44,18 +44,18 @@ public class Animal {
         this.id = 0;
     }
 
-    public void save(SQLiteDatabase db)
+    public void salvar(SQLiteDatabase db)
     {
         // TODO: esse método vai salvar o registro no banco
     }
 
-    public static Animal load(SQLiteDatabase db, int id)
+    public static Animal carregar(SQLiteDatabase db, long id)
     {
         // TODO: esse método vai ler e retornar o registro do banco
         return null;
     }
 
-    public static void all(SQLiteDatabase db, List<Animal> lista)
+    public static void tudo(SQLiteDatabase db, List<Animal> lista)
     {
         // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
     }

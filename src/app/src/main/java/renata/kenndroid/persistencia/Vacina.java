@@ -40,7 +40,7 @@ public class Vacina {
         this.id = 0;
     }
 
-    public void save(SQLiteDatabase db)
+    public void salvar(SQLiteDatabase db)
     {
         ContentValues valores = new ContentValues();
 
@@ -70,14 +70,14 @@ public class Vacina {
         return vac;
     }
 
-    public static void del(SQLiteDatabase db, long id)
+    public static void deletar(SQLiteDatabase db, long id)
     {
         db.delete(Vacina.TABLE_NAME,                // Nome da tabela
             "id=?",                                 // Condições do WHERE para apagar (apenas id)
             new String[] { String.valueOf(id) });   // Valor das condições acima (apenas id)
     }
 
-    public static Vacina load(SQLiteDatabase db, long id)
+    public static Vacina carregar(SQLiteDatabase db, long id)
     {
         Cursor resposta = db.query(Vacina.TABLE_NAME,   // Nome da tabela
             null,                                       // Colunas pra retornar (null=todas)
@@ -100,7 +100,7 @@ public class Vacina {
         return vac;
     }
 
-    public static void all(SQLiteDatabase db, List<Vacina> vacinas)
+    public static void tudo(SQLiteDatabase db, List<Vacina> lista)
     {
         Cursor resposta = db.query(Vacina.TABLE_NAME,   // Nome da tabela
             null,                                       // Colunas pra retornar (null=todas)
@@ -122,7 +122,7 @@ public class Vacina {
         while (!resposta.isAfterLast())
         {
             Vacina vac = lerItem(resposta);
-            vacinas.add(vac);
+            lista.add(vac);
             resposta.moveToNext();
         }
         resposta.close();

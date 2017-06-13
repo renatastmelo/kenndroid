@@ -50,7 +50,7 @@ public class Venda {
     }
 
     // TODO: fazer as listagem de telas para obter ids extrageiros
-    public void save(SQLiteDatabase db)
+    public void salvar(SQLiteDatabase db)
     {
         ContentValues valores = new ContentValues();
 
@@ -77,13 +77,13 @@ public class Venda {
         }
     }
 
-    public static Venda load(SQLiteDatabase db, int id)
+    public static Venda carregar(SQLiteDatabase db, long id)
     {
         // TODO: esse método vai ler e retornar o registro do banco
         return null;
     }
 
-    public static void all(SQLiteDatabase db, List<Venda> lista)
+    public static void tudo(SQLiteDatabase db, List<Venda> lista)
     {
         // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista
     }

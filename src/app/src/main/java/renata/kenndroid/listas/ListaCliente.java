@@ -49,7 +49,7 @@ public class ListaCliente extends AppCompatActivity {
     {
         this.clientes.clear();
         SQLiteDatabase db = KenndroidDb.getInstance(this).getWritableDatabase();
-        Cliente.all(db, this.clientes);
+        Cliente.tudo(db, this.clientes);
         db.close();
     }
 
