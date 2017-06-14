@@ -25,7 +25,7 @@
         <activity android:name=".cadastro.CadVet" />
         <activity android:name=".cadastro.CadCliente" />
         <activity android:name=".cadastro.CadAnimal" />
-        <activity android:name=".cadastro.CadClinicas" />
+        <activity android:name=".cadastro.CadClinica" />
         <activity android:name=".cadastro.CadVacinacao" />
         <activity android:name=".cadastro.CadEvento" />
         <activity android:name=".cadastro.CadCruzamento" />

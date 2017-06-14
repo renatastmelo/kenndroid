@@ -12,16 +12,16 @@ import android.widget.Toast;
 
 import renata.kenndroid.KenndroidDb;
 import renata.kenndroid.R;
-import renata.kenndroid.persistencia.Cliente;
+import renata.kenndroid.persistencia.Clinica;
 
-public class CadCliente extends AppCompatActivity {
+public class CadClinica extends AppCompatActivity {
 
     private Long idEditando = null;
 
     private View.OnClickListener SalvarListener = new View.OnClickListener() {
         public void onClick(View v) {
 
-            Cliente item = new Cliente();
+            Clinica item = new Clinica();
             colocarDadosDaTelaNaPersistencia(item);
 
             KenndroidDb openHelper = KenndroidDb.getInstance(getApplicationContext());
@@ -39,29 +39,19 @@ public class CadCliente extends AppCompatActivity {
 
             KenndroidDb openHelper = KenndroidDb.getInstance(getApplicationContext());
             SQLiteDatabase db = openHelper.getWritableDatabase();
-            Cliente.deletar(db, idEditando);
+            Clinica.deletar(db, idEditando);
             db.close();
             setResult(Activity.RESULT_OK);
             finish();
         }
     };
 
-    public void colocarDadosDaPersistenciaNaTela(Cliente item) {
+    public void colocarDadosDaPersistenciaNaTela(Clinica item) {
         EditText edt;
 
-        if (item.dia_nasc != null) {
-            edt = (EditText) findViewById(R.id.dia);
-            edt.setText(item.dia_nasc.toString());
-        }
-
-        if (item.mes_nasc != null) {
-            edt = (EditText) findViewById(R.id.mes);
-            edt.setText(item.mes_nasc.toString());
-        }
-
-        if (item.ano_nasc != null) {
-            edt = (EditText) findViewById(R.id.ano);
-            edt.setText(item.ano_nasc.toString());
+        if (item.cnpj != null) {
+            edt = (EditText) findViewById(R.id.edt_cnpj);
+            edt.setText(item.cnpj);
         }
 
         if (item.nome != null) {
@@ -69,9 +59,9 @@ public class CadCliente extends AppCompatActivity {
             edt.setText(item.nome);
         }
 
-        if (item.cpf != null) {
-            edt = (EditText) findViewById(R.id.edt_cpf);
-            edt.setText(item.cpf);
+        if (item.razao_social != null) {
+            edt = (EditText) findViewById(R.id.edt_razao_social);
+            edt.setText(item.razao_social);
         }
 
         if (item.cidade != null) {
@@ -120,35 +110,17 @@ public class CadCliente extends AppCompatActivity {
         }
     }
 
-    public void colocarDadosDaTelaNaPersistencia(Cliente item) {
+    public void colocarDadosDaTelaNaPersistencia(Clinica item) {
         EditText edt;
 
-        edt = (EditText) findViewById(R.id.dia);
-        try {
-            item.dia_nasc = Integer.parseInt(edt.getText().toString());
-        } catch (Exception ex) {
-            item.dia_nasc = null;
-        }
-
-        edt = (EditText) findViewById(R.id.mes);
-        try {
-            item.mes_nasc = Integer.parseInt(edt.getText().toString());
-        } catch (Exception ex) {
-            item.mes_nasc = null;
-        }
-
-        edt = (EditText) findViewById(R.id.ano);
-        try {
-            item.ano_nasc = Integer.parseInt(edt.getText().toString());
-        } catch (Exception ex) {
-            item.ano_nasc = null;
-        }
+        edt = (EditText) findViewById(R.id.edt_cnpj);
+        item.cnpj = edt.getText().toString();
 
         edt = (EditText) findViewById(R.id.edt_nome);
         item.nome = edt.getText().toString();
 
-        edt = (EditText) findViewById(R.id.edt_cpf);
-        item.cpf = edt.getText().toString();
+        edt = (EditText) findViewById(R.id.edt_razao_social);
+        item.razao_social = edt.getText().toString();
 
         edt = (EditText) findViewById(R.id.edt_cidade);
         item.cidade = edt.getText().toString();
@@ -189,7 +161,7 @@ public class CadCliente extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cad_clientes);
+        setContentView(R.layout.cad_clinicas);
 
         Button btnSalvar = (Button)findViewById(R.id.salvar);
         btnSalvar.setOnClickListener(SalvarListener);
@@ -203,7 +175,7 @@ public class CadCliente extends AppCompatActivity {
             this.idEditando = intent.getLongExtra("id", 0);
             if (this.idEditando != 0) {
                 SQLiteDatabase db = KenndroidDb.getInstance(this).getReadableDatabase();
-                Cliente item = Cliente.carregar(db, this.idEditando);
+                Clinica item = Clinica.carregar(db, this.idEditando);
                 db.close();
                 colocarDadosDaPersistenciaNaTela(item);
             }

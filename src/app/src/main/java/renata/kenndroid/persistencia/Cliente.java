@@ -70,7 +70,7 @@ public class Cliente {
         if (this.estado != null) valores.put("estado", this.estado);
         if (this.endereco != null) valores.put("endereco", this.endereco);
         if (this.complemento != null) valores.put("complemento", this.complemento);
-        if (this.ponto_ref != null) valores.put("pont_ref", this.ponto_ref);
+        if (this.ponto_ref != null) valores.put("ponto_ref", this.ponto_ref);
         if (this.cep != null) valores.put("cep", this.cep);
         if (this.cpf != null) valores.put("cpf", this.cpf);
         if (this.fone1 != null) valores.put("fone1", this.fone1);

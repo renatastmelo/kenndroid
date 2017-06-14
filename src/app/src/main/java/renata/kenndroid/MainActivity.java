@@ -8,15 +8,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import renata.kenndroid.cadastro.CadAnimal;
-import renata.kenndroid.cadastro.CadAnimalEvento;
-import renata.kenndroid.cadastro.CadCanil;
-import renata.kenndroid.cadastro.CadCliente;
-import renata.kenndroid.cadastro.CadClinicas;
 import renata.kenndroid.cadastro.CadCruzamento;
-import renata.kenndroid.cadastro.CadVendas;
-import renata.kenndroid.cadastro.CadVet;
+import renata.kenndroid.listas.ListaAnimal;
+import renata.kenndroid.listas.ListaCanil;
+import renata.kenndroid.listas.ListaCliente;
+import renata.kenndroid.listas.ListaClinica;
+import renata.kenndroid.listas.ListaEvento;
 import renata.kenndroid.listas.ListaVacina;
+import renata.kenndroid.listas.ListaVenda;
+import renata.kenndroid.listas.ListaVeterinario;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,19 +54,19 @@ public class MainActivity extends AppCompatActivity {
         switch (id)
         {
             case R.id.action_canil:
-                intent = new Intent(this, CadCanil.class);
+                intent = new Intent(this, ListaCanil.class);
                 break;
 
             case R.id.action_animal:
-            intent = new Intent(this, CadAnimal.class);
+            intent = new Intent(this, ListaAnimal.class);
             break;
 
             case R.id.action_clientes:
-                intent = new Intent(this, CadCliente.class);
+                intent = new Intent(this, ListaCliente.class);
                 break;
 
             case R.id.action_eventos:
-                intent = new Intent(this, CadAnimalEvento.class);
+                intent = new Intent(this, ListaEvento.class);
                 break;
 
             case R.id.action_vacinas:
@@ -74,15 +74,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_veterinarios:
-                intent = new Intent(this, CadVet.class);
+                intent = new Intent(this, ListaVeterinario.class);
                 break;
 
             case R.id.action_clinicas:
-                intent = new Intent(this, CadClinicas.class);
+                intent = new Intent(this, ListaClinica.class);
                 break;
 
             case R.id.action_vendas:
-                intent = new Intent(this, CadVendas.class);
+                intent = new Intent(this, ListaVenda.class);
                 break;
 
             case R.id.action_cruzamento:
