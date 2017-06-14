@@ -107,7 +107,11 @@
     <string name="edt_nome_mae">Nome da mãe</string>
     <string name="edt_nome_canil">Nome do Canil</string>
     <string name="edt_nome_comprador">Nome do Comprador</string>
-    <string name="edt_foto">Foto: </string>
+    <string name="pai">Pai</string>
+    <string name="mae">Mãe</string>
+    <string name="canil">Canil</string>
+    <string name="comprador">Cliente</string>
+    <string name="foto">Foto</string>
 
     <!--campos de cadastros extras de Cadastro de Vacinas-->
     <string name="edt_nome_vac">Vacina</string>

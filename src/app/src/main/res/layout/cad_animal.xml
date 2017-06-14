@@ -62,7 +62,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
         <EditText
-            android:id="@+id/data"
+            android:id="@+id/edt_datanasc"
             style="@style/Widget.AppCompat.EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
             android:inputType="date" />
     </LinearLayout>
 
-    <!-- Data de nascimento -->
+    <!-- Data de venda -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
         <EditText
-            android:id="@+id/animal_data"
+            android:id="@+id/edt_datavenda"
             style="@style/Widget.AppCompat.EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,41 +95,80 @@
             android:inputType="date" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/edt_nome_pai"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnPai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pai"/>
+            <TextView
+                android:id="@+id/txt_pai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/edt_nome_pai"
+                />
+        </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/edt_nome_pai"
-        />
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnMae"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mae"/>
+        <TextView
+            android:id="@+id/txt_mae"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/edt_nome_mae"
+            />
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/edt_nome_mae"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/edt_nome_mae"
-        />
-
-    <EditText
-        android:id="@+id/edt_nome_canil"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCanil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/canil"/>
+    <TextView
+        android:id="@+id/txt_canil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/edt_nome_canil"
         />
+    </LinearLayout>
 
-        <EditText
-            android:id="@+id/edt_nome_compradorl"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnComprador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comprador"/>
+        <TextView
+            android:id="@+id/txt_comprador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:hint="@string/edt_nome_comprador" />
-
+    </LinearLayout>
         <!-- Foto -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -138,17 +177,13 @@
         android:orientation="horizontal">
 
 
-        <TextView
-            android:id="@+id/edt_foto"
+        <Button
+            android:id="@+id/btnFoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/edt_foto"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
+            android:text="@string/foto"/>
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/foto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/fab_margin"

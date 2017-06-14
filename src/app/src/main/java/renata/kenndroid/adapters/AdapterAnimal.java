@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -83,10 +84,12 @@ public class AdapterAnimal extends BaseAdapter {
         // Agora encontrar os campos do layout item_Animal
         TextView nome = (TextView) view.findViewById(R.id.txt_nome);
         TextView dataNasc = (TextView) view.findViewById(R.id.txt_data_nasc);
+        ImageView foto = (ImageView) view.findViewById(R.id.img_foto);
 
         // Preencher os campos do layout com a informação da Animal
         nome.setText(animal.nome);
         dataNasc.setText(animal.data_nasc);
+        foto.setImageBitmap(animal.foto);
         return view;
     }
 }

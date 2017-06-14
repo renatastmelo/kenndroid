@@ -86,8 +86,8 @@ public class Cruzamento {
     {
         Cruzamento item = new Cruzamento();
         item.id = resp.getLong(resp.getColumnIndex("id"));
-        item.macho = Animal.carregar(db, resp.getLong(resp.getColumnIndex("macho")));
-        item.femea = Animal.carregar(db, resp.getLong(resp.getColumnIndex("femea")));
+        item.macho = Animal.carregar(db, resp.getLong(resp.getColumnIndex("macho")), 0);
+        item.femea = Animal.carregar(db, resp.getLong(resp.getColumnIndex("femea")), 0);
         item.data = resp.getString(resp.getColumnIndex("data"));
         item.nome_local = resp.getString(resp.getColumnIndex("nome_local"));
         item.cidade = resp.getString(resp.getColumnIndex("cidade"));

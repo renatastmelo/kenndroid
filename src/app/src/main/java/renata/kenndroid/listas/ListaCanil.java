@@ -25,7 +25,12 @@ public class ListaCanil extends AppCompatActivity {
     // Código de Solicitação de Edição para a tela de Cadastro
     public static final int RES_EDICAO = 2;
 
+    // Comandos que guiam o funcionamento da listagem
+    public static final int CMD_LISTAR = 1;     // Apenas listar
+    public static final int CMD_SELECIONAR = 2; // Selecionar um item se o usuário clicar
+
     List<Canil> canis;
+    private int comando;
 
     private View.OnClickListener AddListener = new View.OnClickListener() {
         public void onClick(View v) {
@@ -38,10 +43,22 @@ public class ListaCanil extends AppCompatActivity {
     private AdapterView.OnItemClickListener ItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent intent = new Intent(ListaCanil.this, CadCanil.class);
-            intent.putExtra("comando", "editar");
-            intent.putExtra("id", id);
-            startActivityForResult(intent, RES_EDICAO);
+            // Se o comando era LISTAR
+            if (ListaCanil.this.comando == CMD_LISTAR) {
+                Intent intent = new Intent(ListaCanil.this, CadCanil.class);
+                intent.putExtra("comando", "editar");
+                intent.putExtra("id", id);
+                startActivityForResult(intent, RES_EDICAO);
+            }
+            // Se o comando era SELECIONAR
+            else if (ListaCanil.this.comando == CMD_SELECIONAR) {
+                // Retornar o ID do item clicado pelo usuario
+                Intent result = new Intent();
+                result.putExtra("id", id);
+                result.putExtra("texto", canis.get(position).nome);
+                ListaCanil.this.setResult(Activity.RESULT_OK, result);
+                finish();
+            }
         }
     };
 
@@ -85,6 +102,10 @@ public class ListaCanil extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
+
+        // Ler comando enviado para essa tela
+        Intent intent = getIntent();
+        this.comando = intent.getIntExtra("comando", CMD_LISTAR);
 
         // Criar lista para armazenar os canis em memoria.
         this.canis = new ArrayList<Canil>();

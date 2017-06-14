@@ -30,16 +30,16 @@ public class Venda {
             "CREATE TABLE Venda (" +
                 "id						    INTEGER		PRIMARY KEY		AUTOINCREMENT," +
                 "id_Animal				    INTEGER		NOT NULL," +
-                " id_Cliente				INTEGER		NOT NULL," +
+                "id_Cliente				INTEGER		NOT NULL," +
                 "data					    TEXT		NULL," +
                 "valor					    INTEGER		NULL," +
                 "valor_recebido			    INTEGER		NULL," +
                 "data_ult_pagamento		    TEXT		NULL," +
-                " data_entrega_pedigree	    TEXT		NULL," +
+                "data_entrega_pedigree	    TEXT		NULL," +
                 "forma_pagamento			TEXT		NULL," +
                 "nota_fiscal				INTEGER		NULL," +
                 "observacoes				TEXT		NULL" +
-                    ")";
+                ")";
 
     public static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS Venda";

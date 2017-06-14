@@ -53,7 +53,7 @@ public class CadEvento extends AppCompatActivity {
             edt.setText(item.nome);
         }
 
-        if (item.nome != null) {
+        if (item.organizacao != null) {
             edt = (EditText) findViewById(R.id.edt_organizacao);
             edt.setText(item.organizacao);
         }
