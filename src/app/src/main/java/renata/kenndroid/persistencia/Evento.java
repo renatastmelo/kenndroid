@@ -101,6 +101,7 @@ public class Evento {
         item.fone = resp.getString(resp.getColumnIndex("fone"));
         item.organizacao = resp.getString(resp.getColumnIndex("organizacao"));
         item.email = resp.getString(resp.getColumnIndex("email"));
+        item.data = resp.getString(resp.getColumnIndex("data"));
         return item;
     }
 
