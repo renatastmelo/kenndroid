@@ -16,7 +16,7 @@ import java.util.List;
 import renata.kenndroid.KenndroidDb;
 import renata.kenndroid.R;
 import renata.kenndroid.adapters.AdapterVeterinario;
-import renata.kenndroid.cadastro.CadVet;
+import renata.kenndroid.cadastro.CadVeterinario;
 import renata.kenndroid.persistencia.Veterinario;
 
 public class ListaVeterinario extends AppCompatActivity {
@@ -30,7 +30,7 @@ public class ListaVeterinario extends AppCompatActivity {
 
     private View.OnClickListener AddListener = new View.OnClickListener() {
         public void onClick(View v) {
-            Intent intent = new Intent(ListaVeterinario.this, CadVet.class);
+            Intent intent = new Intent(ListaVeterinario.this, CadVeterinario.class);
             intent.putExtra("comando", "criar");
             startActivityForResult(intent, RES_CADASTRO);
         }
@@ -39,7 +39,7 @@ public class ListaVeterinario extends AppCompatActivity {
     private AdapterView.OnItemClickListener ItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent intent = new Intent(ListaVeterinario.this, CadVet.class);
+            Intent intent = new Intent(ListaVeterinario.this, CadVeterinario.class);
             intent.putExtra("comando", "editar");
             intent.putExtra("id", id);
             startActivityForResult(intent, RES_EDICAO);
