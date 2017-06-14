@@ -49,7 +49,7 @@ public class ListaEvento extends AppCompatActivity {
     {
         this.eventos.clear();
         SQLiteDatabase db = KenndroidDb.getInstance(this).getWritableDatabase();
-        Evento.all(db, this.eventos);
+        Evento.tudo(db, this.eventos);
         db.close();
     }
 

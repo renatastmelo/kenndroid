@@ -10,6 +10,7 @@ import renata.kenndroid.persistencia.Canil;
 import renata.kenndroid.persistencia.Cliente;
 import renata.kenndroid.persistencia.Clinica;
 import renata.kenndroid.persistencia.Cruzamento;
+import renata.kenndroid.persistencia.Evento;
 import renata.kenndroid.persistencia.Vacina;
 import renata.kenndroid.persistencia.Vacinacao;
 import renata.kenndroid.persistencia.Venda;
@@ -42,6 +43,7 @@ public class KenndroidDb extends SQLiteOpenHelper {
         db.execSQL(Canil.SQL_CREATE_TABLE);
         db.execSQL(Clinica.SQL_CREATE_TABLE);
         db.execSQL(Cruzamento.SQL_CREATE_TABLE);
+        db.execSQL(Evento.SQL_CREATE_TABLE);
         db.execSQL(Vacina.SQL_CREATE_TABLE);
         db.execSQL(Vacinacao.SQL_CREATE_TABLE);
         db.execSQL(Venda.SQL_CREATE_TABLE);

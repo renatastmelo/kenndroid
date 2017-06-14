@@ -1,6 +1,7 @@
 package renata.kenndroid.persistencia;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
@@ -26,10 +27,10 @@ public class Canil {
         public String fone2;
         public String email;
 
-    public static final String TABLE_NAME ="Canil";
+    public static final String TABLE_NAME = "canil";
 
     public static final String SQL_CREATE_TABLE =
-            "CREATE TABLE Canil (" +
+            "CREATE TABLE canil (" +
                 "id				INTEGER		PRIMARY KEY		AUTOINCREMENT," +
                 "nome			TEXT		NOT NULL," +
                 "estado			TEXT		NULL," +
@@ -79,24 +80,92 @@ public class Canil {
             valores.put("id", this.id);
         }
 
-        long id = db.insertWithOnConflict("cad_canil", null, valores, SQLiteDatabase.CONFLICT_IGNORE);
+        long id = db.insertWithOnConflict(TABLE_NAME, null, valores, SQLiteDatabase.CONFLICT_IGNORE);
 
         if (id == -1) {
-            db.update("cad_canil", valores, "id=?", new String[] { Long.toString(this.id) });
+            db.update(TABLE_NAME, valores, "id=?", new String[] { Long.toString(this.id) });
         }else {
             this.id = id;
         }
     }
 
-    public static Canil carregar(SQLiteDatabase db, long id)
+    public static Canil lerItem(Cursor resp)
     {
-        // TODO: esse método vai ler e retornar o registro do banco
-        return null;
+        Canil item = new Canil();
+        item.id = resp.getLong(resp.getColumnIndex("id"));
+        item.nome = resp.getString(resp.getColumnIndex("nome"));
+        item.cidade = resp.getString(resp.getColumnIndex("cidade"));
+        item.estado = resp.getString(resp.getColumnIndex("estado"));
+        item.endereco = resp.getString(resp.getColumnIndex("endereco"));
+        item.complemento = resp.getString(resp.getColumnIndex("complemento"));
+        item.ponto_ref = resp.getString(resp.getColumnIndex("ponto_ref"));
+        item.cep = resp.getInt(resp.getColumnIndex("cep"));
+        item.data_fundacao = resp.getString(resp.getColumnIndex("data_fundacao"));
+        item.cnpj = resp.getString(resp.getColumnIndex("cnpj"));
+        item.razao_social = resp.getString(resp.getColumnIndex("razao_social"));
+        item.fone1 = resp.getString(resp.getColumnIndex("fone1"));
+        item.fone2 = resp.getString(resp.getColumnIndex("fone2"));
+        item.email = resp.getString(resp.getColumnIndex("email"));
+        return item;
     }
 
-    public static void tudo(SQLiteDatabase db, List<Canil> canis)
+    public static void deletar(SQLiteDatabase db, long id)
     {
-        // TODO: esse método vai ler e retornar TODOS os registros do banco em uma lista.
+        db.delete(TABLE_NAME,                // Nome da tabela
+                "id=?",                                 // Condições do WHERE para apagar (apenas id)
+                new String[] { String.valueOf(id) });   // Valor das condições acima (apenas id)
+    }
+
+    public static Canil carregar(SQLiteDatabase db, long id)
+    {
+        Cursor resposta = db.query(TABLE_NAME,      // Nome da tabela
+                null,                               // Colunas pra retornar (null=todas)
+                "id=?",                             // Colunas de condição (apenas id)
+                new String[] {String.valueOf(id)},  // Valores de condição (id)
+                null,                               // Colunas para Agrupar (não utilizado)
+                null,                               // Condição de valor Agrupado (não utilizado)
+                null);
+
+        // Se não obtive resposta retorne null
+        if (resposta.getCount() <= 0)
+        {
+            resposta.close();
+            return null;
+        }
+
+        // Ler primeiro e único item
+        resposta.moveToFirst();
+        Canil item = lerItem(resposta);
+        resposta.close();
+        return item;
+    }
+
+    public static void tudo(SQLiteDatabase db, List<Canil> lista)
+    {
+        Cursor resposta = db.query(TABLE_NAME,   // Nome da tabela
+                null,                            // Colunas pra retornar (null=todas)
+                null,                            // Colunas de condição (não utilizado)
+                null,                            // Valores de condição (não utilizado)
+                null,                            // Colunas para Agrupar (não utilizado)
+                null,                            // Condição de valor Agrupado (não utilizado)
+                null);                           // Ordenação
+
+        // Ir para o começo da resposta (primeira linha)
+        if (resposta.moveToFirst() == false) {
+            // Se não tiver primeiro item (nao tem nenhum item)
+            // Retornar a lista vazia
+            resposta.close();
+            return;
+        }
+
+        // Ler linha por linha
+        while (!resposta.isAfterLast())
+        {
+            Canil item = lerItem(resposta);
+            lista.add(item);
+            resposta.moveToNext();
+        }
+        resposta.close();
     }
 
     //TODO: conferir no requisito quais as pesqueisas especificadas
