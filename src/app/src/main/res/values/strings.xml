@@ -68,16 +68,19 @@
 
 
     <!--campos de cadastros extras de venda-->
-    <string name="edt_dt">Data da venda</string>
-    <string name="edt_valor">Valor Total: </string>
+    <string name="edt_dt">Data da Venda:</string>
+    <string name="edt_valor">Valor Total:</string>
     <string name="edt_valor_recebido">Valor recebido:</string>
-    <string name="edt_entrega_pedigree">Entrega pedigree: </string>
-    <string name="edt_dt_ult_pgto">Data do último pagamento</string>
-    <string name="edt_nota_fiscal">Nota Fiscal</string>
-    <string name="edt_forma_pgto">forma de pgto</string>
+    <string name="edt_entrega_pedigree">Entrega pedigree:</string>
+    <string name="edt_dt_ult_pgto">Último pagamento:</string>
+    <string name="edt_nota_fiscal">Com Nota Fiscal</string>
+    <string name="edt_forma_pgto">Pagamento:</string>
     <string name="edt_obs">Observações</string>
+    <string name="animal">Animal</string>
+    <string name="cliente">Cliente</string>
+    <string name="nome_do_animal">Nome do animal</string>
 
-    <!--campos de formas de vendas do cadastro de venda-->
+    <!--campos de formas de pagamentos do cadastro de venda-->
     <string-array name="formas_pgto">
         <item>Espécie</item>
         <item>Débito</item>
@@ -103,8 +106,8 @@
 
     <!--campos de cadastros extras de Cadastro de Animais-->
     <string name="edt_nome_campo_data_venda">Data da venda:</string>
-    <string name="edt_nome_pai">Nome do pai</string>
-    <string name="edt_nome_mae">Nome da mãe</string>
+    <string name="edt_nome_pai">Nome do Pai</string>
+    <string name="edt_nome_mae">Nome da Mãe</string>
     <string name="edt_nome_canil">Nome do Canil</string>
     <string name="edt_nome_comprador">Nome do Comprador</string>
     <string name="pai">Pai</string>
@@ -140,7 +143,7 @@
     <string name="edt_nomeFemea">Fêmea: </string>
     <string name="edt_datadot">Data: </string>
     <string name="edt_nome_local">Nome do Local</string>
-    <string name="edt_sucesso">Sucesso &lt;3 </string>
+    <string name="edt_sucesso">Sucesso</string>
 
     <!--campos de cadastros extras de Cadastro de Animais em Eventos-->
     <string name="edt_nomeEventotpo">Tipo de participação: </string>

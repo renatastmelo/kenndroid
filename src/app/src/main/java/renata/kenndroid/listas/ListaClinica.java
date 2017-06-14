@@ -107,5 +107,7 @@ public class ListaClinica extends AppCompatActivity {
 
         // Setar o adapter da ListView da tela
         lista.setAdapter(adapter);
+
+        setTitle("Clínicas");
     }
 }

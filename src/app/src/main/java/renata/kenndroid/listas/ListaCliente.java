@@ -128,5 +128,7 @@ public class ListaCliente extends AppCompatActivity {
 
         // Setar o adapter da ListView da tela
         lista.setAdapter(adapter);
+
+        setTitle("Clientes");
     }
 }

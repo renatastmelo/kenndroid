@@ -18,14 +18,14 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:textStyle="bold"
-            android:textSize="14sp"
+            android:textSize="18sp"
             />
 
         <TextView
             android:id="@+id/txt_data_nasc"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:textSize="14sp"
+            android:textSize="18sp"
             />
     </LinearLayout>
 </LinearLayout>

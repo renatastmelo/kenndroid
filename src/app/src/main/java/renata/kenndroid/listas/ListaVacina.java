@@ -109,5 +109,7 @@ public class ListaVacina extends AppCompatActivity {
 
         // Setar o adapter da ListView da tela
         lista.setAdapter(adapter);
+
+        setTitle("Vacinas");
     }
 }

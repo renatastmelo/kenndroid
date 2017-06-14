@@ -23,66 +23,36 @@
             app:srcCompat="@drawable/ic_vendas" />
 
         <TextView
-
             android:id="@+id/titulo_cadVenda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="0dp"
             android:text="@string/titulo_cadVenda"
             android:layout_gravity="center_vertical"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
         <!-- nome dos itens em dropbox-->
-        <LinearLayout
+        <Button
+            android:id="@+id/btnAnimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
+            android:text="@string/animal"
+            android:textAllCaps="false"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            android:background="@color/corBtn"/>
 
-            <TextView
-                android:id="@+id/text_drop_animal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/edt_nome_animal"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/dropAnimal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:spinnerMode="dropdown"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <!-- nome dos itens em dropbox-->
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:orientation="horizontal"
+        <Button
+            android:id="@+id/btnCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:baselineAligned="false">
+            android:text="@string/cliente"
+            android:textAllCaps="false"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            android:background="@color/corBtn"/>
 
-            <TextView
-                android:id="@+id/text_drop_femea"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/edt_nome_cliente"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/dropClientes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:spinnerMode="dropdown"
-                android:textSize="20dp" />
-        </LinearLayout>
         <!-- nome dos itens em dropbox-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,12 +70,12 @@
                 android:textSize="20sp" />
 
             <Spinner
-                android:id="@+id/dropFPgto"
+                android:id="@+id/spnPagamento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:dropDownWidth="match_parent"
-                android:entries="@string/edt_forma_pgto"
+                android:entries="@array/formas_pgto"
                 android:spinnerMode="dropdown"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -115,7 +85,7 @@
             android:id="@+id/edt_nota_fiscal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@array/formas_pgto" />
+            android:text="@string/edt_nota_fiscal" />
 
         <!-- Data da venda-->
         <LinearLayout
@@ -131,14 +101,14 @@
                 android:layout_gravity="center_vertical"
                 android:text="@string/edt_dt"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/edt_dt_venda"
                 style="@style/Widget.AppCompat.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="  dd/mm/ano"
+                android:hint="dd/mm/ano"
                 android:ems="10"
                 android:inputType="date" />
         </LinearLayout>
@@ -157,14 +127,14 @@
                 android:layout_gravity="center_vertical"
                 android:text="@string/edt_entrega_pedigree"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/dt_pedigree"
                 style="@style/Widget.AppCompat.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="  dd/mm/ano"
+                android:hint="dd/mm/ano"
                 android:ems="10"
                 android:inputType="date" />
         </LinearLayout>
@@ -183,7 +153,7 @@
                 android:layout_gravity="center_vertical"
                 android:text="@string/edt_valor"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/valor_total"
@@ -192,7 +162,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="R$"
-                android:inputType="number" />
+                android:digits="0123456789,"
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
         <!-- Valor recebido -->
@@ -209,7 +180,7 @@
                 android:layout_gravity="center_vertical"
                 android:text="@string/edt_valor_recebido"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/valor_recebido"
@@ -218,7 +189,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="R$"
-                android:inputType="number" />
+                android:digits="0123456789,"
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
         <!-- Data do ultimo pagamento-->
@@ -233,16 +205,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="@string/edt_entrega_pedigree"
+                android:text="@string/edt_dt_ult_pgto"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/dt_ult_pgto"
                 style="@style/Widget.AppCompat.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="  dd/mm/ano"
+                android:hint="dd/mm/ano"
                 android:ems="10"
                 android:inputType="date" />
         </LinearLayout>

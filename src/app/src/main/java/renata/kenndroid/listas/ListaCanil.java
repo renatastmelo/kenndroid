@@ -128,5 +128,7 @@ public class ListaCanil extends AppCompatActivity {
 
         // Setar o adapter da ListView da tela
         lista.setAdapter(adapter);
+
+        setTitle("Canis");
     }
 }
