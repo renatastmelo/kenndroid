@@ -13,6 +13,7 @@ import renata.kenndroid.listas.ListaAnimal;
 import renata.kenndroid.listas.ListaCanil;
 import renata.kenndroid.listas.ListaCliente;
 import renata.kenndroid.listas.ListaClinica;
+import renata.kenndroid.listas.ListaCruzamento;
 import renata.kenndroid.listas.ListaEvento;
 import renata.kenndroid.listas.ListaVacina;
 import renata.kenndroid.listas.ListaVenda;
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_cruzamento:
-                intent = new Intent(this, CadCruzamento.class);
+                intent = new Intent(this, ListaCruzamento.class);
                 break;
         }
         startActivity(intent);

@@ -278,6 +278,7 @@ public class CadAnimal extends AppCompatActivity {
         if (this.idEditando != null) {
             item.id = this.idEditando;
         }
+        db.close();
     }
 
     @Override

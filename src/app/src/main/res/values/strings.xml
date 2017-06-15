@@ -144,6 +144,8 @@
     <string name="edt_datadot">Data: </string>
     <string name="edt_nome_local">Nome do Local</string>
     <string name="edt_sucesso">Sucesso</string>
+    <string name="macho">Macho</string>
+    <string name="femea">Femea</string>
 
     <!--campos de cadastros extras de Cadastro de Animais em Eventos-->
     <string name="edt_nomeEventotpo">Tipo de participação: </string>

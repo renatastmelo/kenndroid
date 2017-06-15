@@ -76,13 +76,11 @@ public class AdapterCruzamento extends BaseAdapter {
         Cruzamento item = this.itens.get(position);
 
         // Agora encontrar os campos do layout item_Canil
-        TextView macho = (TextView) view.findViewById(R.id.txt_macho);
-        TextView femea = (TextView) view.findViewById(R.id.txt_femea);
+        TextView animais = (TextView) view.findViewById(R.id.txt_animais);
         TextView data = (TextView) view.findViewById(R.id.txt_data);
 
         // Preencher os campos do layout com a informação da Canil
-        macho.setText("(M)" + item.macho.nome);
-        femea.setText(item.femea + "(F)");
+        animais.setText("(M)" + item.macho.nome + " x " + item.femea.nome + "(F)");
         data.setText(item.data);
         return view;
     }

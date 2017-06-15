@@ -17,12 +17,10 @@
         android:layout_marginRight="10dp"
         android:clickable="true"
         android:onClick="invokeNewArticle"
-        android:src="@android:drawable/ic_menu_add"/>
+        android:src="@drawable/ic_add"/>
 
         <ListView
             android:id="@+id/lista"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-        />
+            android:layout_height="match_parent" />
 </RelativeLayout>

@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="renata.kenndroid">
 
-    <uses-feature android:name="android.hardware.camera"
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
 
     <application
@@ -40,7 +41,8 @@
         <activity android:name=".listas.ListaClinica" />
         <activity android:name=".listas.ListaEvento" />
         <activity android:name=".listas.ListaVenda" />
-        <activity android:name=".listas.ListaVeterinario"></activity>
+        <activity android:name=".listas.ListaVeterinario" />
+        <activity android:name=".listas.ListaCruzamento"></activity>
     </application>
 
 </manifest>

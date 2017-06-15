@@ -65,7 +65,7 @@ public class Cruzamento {
         if (this.estado != null) valores.put("estado", this.estado);
         if (this.endereco != null) valores.put("endereco", this.endereco);
         if (this.complemento != null) valores.put("complemento", this.complemento);
-        if (this.ponto_ref != null) valores.put("pont_ref", this.ponto_ref);
+        if (this.ponto_ref != null) valores.put("ponto_ref", this.ponto_ref);
         if (this.cep != null) valores.put("cep", this.cep);
         if (this.sucesso != null) valores.put("sucesso", this.sucesso ? 1 : 0);
 
@@ -98,6 +98,13 @@ public class Cruzamento {
         item.cep = resp.getInt(resp.getColumnIndex("cep"));
         item.sucesso = (resp.getInt(resp.getColumnIndex("sucesso")) == 1);
         return item;
+    }
+
+    public static void deletar(SQLiteDatabase db, long id)
+    {
+        db.delete(TABLE_NAME,                // Nome da tabela
+                "id=?",                                 // Condições do WHERE para apagar (apenas id)
+                new String[] { String.valueOf(id) });   // Valor das condições acima (apenas id)
     }
 
     public static Cruzamento carregar(SQLiteDatabase db, long id)
